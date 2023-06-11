@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	<!--Заголовок страницы, контейнер для других важных данных (не отображается)-->
+	<head>
+		<!--Заголовок страницы-->
+		<title>index</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			sizes="192x192"
+			href="img/favicon.ico"
+		/>
+		<!--===============================-->
+		<!--Libs-->
+
+			<!--JQ--><script src="libs/jquery.js"></script>
+
+		<!--===============================-->
+		<!--Css-->
+			<link rel="stylesheet" href="css/style.css" />
+		<!--===============================-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="format-detection" content="telephone=no">
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<div class="wrapper">
+			<div class="dashboard">
+				<img src="img/dashboard/bacgraund.png" alt="" class="dashboard__img">
+				<div class="dashboard__wrapper">
+					<div class="dashboard-ponel">
+						<div class="dashboard-ponel__top">
+							<a href="#" data-da=".dashboard-header, 1064, last" class="dashboard-logo">
+								<img src="img/Logo.svg" alt="">
+							</a>
+							<ul class="dashboard-ponel__list">
+								<li class="dashboard-ponel-item">
+									<a href="#" class="active">
+										<span class="dashboard-ponel-item__icon icon-House"></span>
+										<span class="dashboard-ponel-item__text">
+											Dashboard
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-ChartPieSlice"></span>
+										<span class="dashboard-ponel-item__text">
+											Invest
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-UsersThree"></span>
+										<span class="dashboard-ponel-item__text">
+											Partners
+										</span>
+										<span class="dashboard-ponel-item__number">
+											+2
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-Megaphone"></span>
+										<span class="dashboard-ponel-item__text">
+											News
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dashboard-ponel__bottom">
+							<ul data-da=".burger-list__body, 1064, last" class="dashboard-ponel__list">
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-ChatsTeardrop"></span>
+										<span class="dashboard-ponel-item__text">
+											Support
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-Question"></span>
+										<span class="dashboard-ponel-item__text">
+											FAQ
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-Scroll"></span>
+										<span class="dashboard-ponel-item__text">
+											Instructions
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-telegram"></span>
+										<span class="dashboard-ponel-item__text">
+											Telegram bot
+										</span>
+									</a>
+								</li>
+							</ul>
+							<div data-da=".burger-tema__content, 1064, last" class="tema-switch">
+								<span class="tema-switch__icon tema-switch__icon_sun">
+									<span class="icon-Sun"></span>
+								</span>
+								<span class="tema-switch__icon tema-switch__icon_moon">
+									<span class="icon-Moon"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="dashboard-body">
+						<div class="dashboard-header">
+							<div data-da=".burger-news, 1064, last" class="dashboard-header__left">
+								<div class="dashboard-header-news">
+									<span class="icon-Megaphone"></span>
+									News:
+									<span class="dashboard-header-news__blak">
+										New crypto listings
+									</span>
+								</div>
+								<a href="#" class="dashboard-header-icon">
+									<span class="icon-fi_list"></span>
+								</a>
+							</div>
+							<div class="dashboard-header__right">
+								<div class="dashboard-header-langvig">
+									<span class="dashboard-header-langvig__icon icon-planet"></span>
+									<span class="dashboard-header-langvig__text">
+										English
+									</span>
+									<span class="dashboard-header-langvig__arrow icon-Arrow-Caret-Down"></span>
+								</div>
+								<a href="#" class="dashboard-header-icon">
+									<span class="icon-Not-Icon"></span>
+								</a>
+								<span class="dashboard-header-profile icon-Profile"></span>
+							</div>
+							<div class="menu__icon _menu__icon">
+								<span></span>
+							</div>
+						</div>
+						<h3 class="dashboard-body__title">
+							Dashboard
+						</h3>
+						<div class="dashboard-body__flex">
+							<div class="dashboard-body-blok dashboard-body-blok_55">
+								<div class="dashboard-body-blok__item">
+									<div class="dashboard-schedule">
+										<div class="dashboard-schedule__flex">
+											<div class="dashboard-schedule__blok">
+												<div class="dashboard-schedule-eye">
+													<h5 class="dashboard-schedule-eye__text">
+														Main balance
+													</h5>
+													<span class="dashboard-schedule-eye__icon icon-EyeSlash"></span>
+												</div>
+												<div class="dashboard-schedule__title">
+													12,645.48 USDT
+												</div>
+												<div class="dashboard-schedule-sub-title">
+													<span class="dashboard-schedule-sub-title__gren">
+														<span class="icon-TrendUp"></span>
+														+38.81 $ (1.02%)
+													</span>
+													- Last 7 days
+												</div>
+											</div>
+											<div class="dashboard-schedule__blok">
+												<img src="img/dashboard/1.png" alt="">
+											</div>
+										</div>
+										<div class="dashboard-schedule-button">
+											<a href="#" class="dashboard-schedule-button__irem active">
+												Deposit
+											</a>
+											<a href="#" class="dashboard-schedule-button__irem">
+												Withdraw
+											</a>
+											<a href="#" class="dashboard-schedule-button__irem">
+												Swap
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-body-blok__item">
+									<div class="dashboard-body-check">
+										<div class="dashboard-body-check__item">
+											<div class="dashboard-body-check__icon ">
+												<img src="img/dashboard/ChartBar.svg" alt="">
+											</div>
+											<div class="dashboard-body-check__content">
+												<h5 class="dashboard-body-check__title">
+													Month Revenue
+												</h5>
+												<p class="dashboard-body-check__text">
+													779.74 USDT
+												</p>
+											</div>
+										</div>
+										<div class="dashboard-body-check__item">
+											<div class="dashboard-body-check__icon ">
+												<img src="img/dashboard/Coins.svg" alt="">
+											</div>
+											<div class="dashboard-body-check__content">
+												<h5 class="dashboard-body-check__title">
+													Month Income
+												</h5>
+												<p class="dashboard-body-check__text">
+													184.14 USDT
+												</p>
+											</div>
+										</div>
+										<div class="dashboard-body-check__item">
+											<div class="dashboard-body-check__icon ">
+												<img src="img/dashboard/Coins.svg" alt="">
+											</div>
+											<div class="dashboard-body-check__content">
+												<h5 class="dashboard-body-check__title">
+													Month Revenue
+												</h5>
+												<p class="dashboard-body-check__text">
+													779.74 USDT
+												</p>
+											</div>
+										</div>
+										<div class="dashboard-body-check__item">
+											<div class="dashboard-body-check__icon ">
+												<img src="img/dashboard/Coins.svg" alt="">
+											</div>
+											<div class="dashboard-body-check__content">
+												<h5 class="dashboard-body-check__title">
+													Month Income
+												</h5>
+												<p class="dashboard-body-check__text">
+													184.14 USDT
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-body-blok__item">
+									<div class="dashboard-schedule-eye">
+										<h5 class="dashboard-schedule-eye__text">
+											Balance Overview
+										</h5>
+										<span class="dashboard-schedule-eye__icon ">
+											<img src="img/dashboard/CaretDown.svg" alt="">
+										</span>
+									</div>
+									<div class="dashboard-invest">
+										<div class="dashboard-invest__icon">
+											<img src="img/dashboard/icon/Wallet.svg" alt="">
+										</div>
+										<div class="dashboard-invest__wrapper">
+											<div class="dashboard-invest__title">
+												Invest balance
+											</div>
+											<div class="dashboard-invest__content">
+												8,524.12 USDT
+												<span class="dashboard-invest__well">
+													≈ $82.00
+												</span>
+											</div>
+										</div>
+										<div class="dashboard-invest__buttons">
+											<a href="#" class="dashboard-invest__button">
+												<img src="img/dashboard/icon/DownloadSimple.svg" alt="">
+											</a>
+											<a href="#" class="dashboard-invest__button">
+												<img src="img/dashboard/icon/UploadSimple.svg" alt="">
+											</a>
+											<a href="#" class="dashboard-invest__button">
+												<img src="img/dashboard/icon/Swap.svg" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="dashboard-token">
+										<div class="dashboard-token__icon">
+											<img src="img/dashboard/icon/Coins.svg" alt="">
+										</div>
+										<div class="dashboard-token__wrapper">
+											<div class="dashboard-token__blok">
+												<div class="dashboard-token__title">
+													Token balance
+												</div>
+												<div class="dashboard-token__content">
+													1 056 212.00 ITE
+													<span class="dashboard-token__well">
+														≈ $82.00
+													</span>
+												</div>
+											</div>
+											<div class="dashboard-token__blok">
+												<div class="dashboard-token__title">
+													Reward
+												</div>
+												<div class="dashboard-token__content dashboard-token__content_grin">
+													+486.22
+													<span>
+														≈ $12.56
+													</span>
+												</div>
+											</div>
+										</div>
+										<!--Обязательно вводить число в формате 00:00:00 -->
+										<div class="dashboard-token-timer _timer">
+											<span class="icon-Clock2"></span>
+											Claim:
+											<span class="_timer-content">24:00:17</span>
+											<span class="icon-Info"></span>
+										</div>
+									</div>
+									<div class="dashboard-partner">
+										<div class="dashboard-partner__icon">
+											<img src="img/dashboard/icon/UsersThree.svg" alt="">
+										</div>
+										<div class="dashboard-partner__wrapper">
+											<div class="dashboard-partner__blok">
+												<div class="dashboard-partner__title">
+													Partner balance
+												</div>
+												<div class="dashboard-partner__content">
+													1,218.44 USDT
+													<span class="dashboard-partner__well">
+														≈ $2,467.81
+													</span>
+												</div>
+											</div>
+											<div class="dashboard-partner-withdraw _withdraw">
+												<h5 class="dashboard-partner-withdraw__title">
+													Withdraw limit
+													<span class="icon-Info"></span>
+												</h5>
+												<div class="dashboard-partner-withdraw__wrapper">
+													<div class="dashboard-partner-withdraw__strip">
+														<span class="_withdraw-line"></span>
+													</div>
+													<div class="dashboard-partner-withdraw__number">
+														<span class="_withdraw-min">528</span>/
+														<span class="_withdraw-big">3560</span>USDT
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="dashboard-partner__buttons">
+											<a href="#" class="dashboard-partner__button">
+												<img src="img/dashboard/icon/Swap.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="dashboard-body-blok dashboard-body-blok_45">
+								<div class="dashboard-body-blok__item dashboard-body-blok__item_big">
+									<div class="dashboard-story _list-switching">
+										<div class="dashboard-schedule-eye">
+											<h5 class="dashboard-schedule-eye__text">
+												Recent Transactions
+											</h5>
+											<span class="dashboard-schedule-eye__icon ">
+												<img src="img/dashboard/CaretDown.svg" alt="">
+											</span>
+										</div>
+										<div class="dashboard-story-button _list-switching__button">
+											<div class="dashboard-story-button__item">
+												<span>Balance Transactions</span>
+											</div>
+											<div class="dashboard-story-button__item">
+												<span>Trading Bot Transactions</span>
+											</div>
+										</div>
+										<div class="_list-switching__wrapper dashboard-stor__wrapper">
+											<div class="dashboard-stor__list">
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number dashboard-stor-item__number_red">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number dashboard-stor-item__number_red">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="dashboard-stor__list">
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-17
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number dashboard-stor-item__number_red">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number dashboard-stor-item__number_red">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+												<div class="dashboard-stor-item">
+													<div class="dashboard-stor-item__data">
+														<span class="dashboard-stor-item__icon icon-Frame"></span>
+														<div>
+															<h5 class="dashboard-stor-item__title">
+																Withdraw
+															</h5>
+															<p class="dashboard-stor-item__text">
+																2023-05-16
+															</p>
+														</div>
+													</div>
+													<div class="dashboard-stor-item__content">
+														<div class="dashboard-stor-item__number">
+															- 1310 USDT
+														</div>
+														<div class="dashboard-stor-item__status dashboard-stor-item__status_grin">
+															Completed
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="burger _menu__body">
+						<div class="burger-account"> 
+							<div class="burger-account__img icon-Profile"></div>
+							<div class="burger-account__content">
+								<h5 class="burger-account__title">
+									Ethan Anderson
+								</h5>
+								<a href="#" class="burger-account__email">
+									ethan.anderson@example.com
+								</a>
+							</div>
+							<div class="burger-account__icon">
+								<img src="img/dashboard/CaretDown.svg" alt="">
+							</div>
+						</div>
+						<div class="burger-news"></div>
+						<div class="burger-list">
+							<div class="burger-list__body"></div>
+							<div class="burger-tema">
+								<div class="burger-tema__text">
+									<span class="icon-MoonStars"></span>
+									Dark mode
+								</div>
+								<div class="burger-tema__content"></div>
+							</div>
+							<div class="burger-langvig">
+								<div class="burger-langvig__text">
+									<span class="icon-planet"></span>
+									Language
+								</div>
+								<div class="burger-langvig__title">
+									English
+									<img src="img/dashboard/CaretDown.svg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/custom.js"></script>
+	</body>
+</html>
