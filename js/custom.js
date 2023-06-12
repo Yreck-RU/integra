@@ -147,6 +147,119 @@ if (iconMenu) {
 
 
 //==================================================================================================================================================
+//График - "Начало"
+//==================================================================================================================================================
+
+const receivingInterests = document.querySelectorAll('._receiving-interests');
+let receivingInterestsObgeg = [];
+
+const receivingFlowers = document.querySelectorAll('._receiving-flowers');
+let receivingFlowersObgeg = [];
+
+if (receivingInterests) {
+	for (let i = 0; i < receivingInterests.length; i++) {
+		let receivingInterest = receivingInterests[i];
+		let receivingInterestContent = +receivingInterest.querySelector('._receiving-interests__content').innerText.replace(/[^0-9,.]/g, ' ');
+		receivingInterestsObgeg.push(receivingInterestContent);
+	}
+}
+if (receivingFlowers) {
+	for (let i = 0; i < receivingFlowers.length; i++) {
+		let receivingFlower = receivingFlowers[i];
+		let receivingFlowerContent = receivingFlower.querySelector('._receiving-flowers__content').innerText;
+		receivingFlower.querySelector('._receiving-flowers__content').style.backgroundColor = `${receivingFlowerContent}`;
+		receivingFlowersObgeg.push(receivingFlowerContent);
+	}
+}
+
+/*series: [74.27, 25.73],*/
+/*['#16c784', '#1750b1']*/
+var options = {
+	series: receivingInterestsObgeg,
+	chart: {
+		type: 'donut',
+	},
+	fill: {
+		colors: receivingFlowersObgeg,
+	},
+	dataLabels: {
+		enabled: false,
+	},
+	responsive: [{
+		breakpoint: 2,
+		options: {
+			chart: {
+				width: 380,
+			},
+		}
+	}],
+	yaxis: {
+		axisBorder: {
+			show: false
+		},
+	},
+	states: {
+	    normal: {
+	        filter: {
+	            type: 'none',
+	            value: 0.1,
+	        }
+	    },
+	    hover: {
+	    	allowMultipleDataPointsSelection: false,
+	        filter: {
+	            type: 'lighten',
+	            value: 0,
+	        }
+	    },
+	    active: {
+	        allowMultipleDataPointsSelection: false,
+	        filter: {
+	            type: 'darken',
+	            value: 1,
+	        }
+	    },
+	}
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+
+const schedule = document.querySelector('.schedule');
+
+if (schedule) {
+	let timerinAniItemWrapper = setTimeout(function tick() {
+		schedule.classList.add('_active');
+
+		let rect = document.querySelector(".apexcharts-inner").getBoundingClientRect();
+		let height = rect.height;
+
+		let scheduleTitle = document.querySelector(".schedule-title");
+		scheduleTitle.style.height = `${height}px`;
+		scheduleTitle.style.width = `${height}px`;
+	}, 1200);
+}
+
+
+
+
+const buttonS = document.querySelector('.buttonS');
+if (buttonS) {
+	buttonS.addEventListener("click", function (e) {
+		console.log(chart);
+	});
+}
+
+//==================================================================================================================================================
+//График - "Конец"
+//==================================================================================================================================================
+
+
+
+
+
+//==================================================================================================================================================
 //Динамический адаптив - "Начало"
 //==================================================================================================================================================
 

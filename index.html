@@ -14,7 +14,6 @@
 		<!--===============================-->
 		<!--Libs-->
 
-			<!--JQ--><script src="libs/jquery.js"></script>
 
 		<!--===============================-->
 		<!--Css-->
@@ -31,7 +30,7 @@
 				<img src="img/dashboard/bacgraund.png" alt="" class="dashboard__img">
 				<div class="dashboard__wrapper">
 					<div class="dashboard-ponel">
-						<div class="dashboard-ponel__top">
+						<div data-da=".dashboard-body, 640, last" class="dashboard-ponel__top">
 							<a href="#" data-da=".dashboard-header, 1064, last" class="dashboard-logo">
 								<img src="img/Logo.svg" alt="">
 							</a>
@@ -101,7 +100,9 @@
 								</li>
 								<li class="dashboard-ponel-item">
 									<a href="#">
-										<span class="dashboard-ponel-item__icon icon-telegram"></span>
+										<span class="dashboard-ponel-item__icon">
+											<img src="img/dashboard/icon-park_telegram.svg" alt="">
+										</span>
 										<span class="dashboard-ponel-item__text">
 											Telegram bot
 										</span>
@@ -128,7 +129,7 @@
 										New crypto listings
 									</span>
 								</div>
-								<a href="#" class="dashboard-header-icon">
+								<a href="#" class="dashboard-header-icon hover-transform">
 									<span class="icon-fi_list"></span>
 								</a>
 							</div>
@@ -140,10 +141,10 @@
 									</span>
 									<span class="dashboard-header-langvig__arrow icon-Arrow-Caret-Down"></span>
 								</div>
-								<a href="#" class="dashboard-header-icon">
+								<a href="#" class="dashboard-header-icon hover-transform">
 									<span class="icon-Not-Icon"></span>
 								</a>
-								<span class="dashboard-header-profile icon-Profile"></span>
+								<span class="dashboard-header-profile icon-Profile hover-transform"></span>
 							</div>
 							<div class="menu__icon _menu__icon">
 								<span></span>
@@ -168,25 +169,70 @@
 													12,645.48 USDT
 												</div>
 												<div class="dashboard-schedule-sub-title">
-													<span class="dashboard-schedule-sub-title__gren">
+													<!-- dashboard-schedule-sub-title__gren -->
+													<span class="dashboard-schedule-sub-title__red">
 														<span class="icon-TrendUp"></span>
 														+38.81 $ (1.02%)
 													</span>
 													- Last 7 days
 												</div>
 											</div>
-											<div class="dashboard-schedule__blok">
-												<img src="img/dashboard/1.png" alt="">
+											<div class="dashboard-schedule__blok dashboard-schedule__blok_53 schedule-wrapper">
+												<div class="schedule">
+													<div id="chart"></div>
+													<div class="schedule-title">
+														<h5 class="schedule-title__title">
+															ITE
+														</h5>
+														<p class="schedule-title__text">
+															Balance
+														</p>
+													</div>
+												</div>
+												<div class="schedule-button">
+													<a href="#" class="schedule-button__item _receiving-interests _receiving-flowers">
+														<div class="schedule-button-title">
+															<div class="schedule-button-title__icon _receiving-flowers__content">#16C784</div>
+															<div class="schedule-button-title__text">
+																USDT balance
+															</div>
+														</div>
+														<div class="schedule-button-content">
+															<div class="schedule-button-content__title">
+																<span>12,645.48</span> USDT
+															</div>
+															<div class="schedule-button-content__number _receiving-interests__content">
+																74.27
+															</div>
+														</div>
+													</a>
+													<a href="#" class="schedule-button__item _receiving-interests _receiving-flowers">
+														<div class="schedule-button-title">
+															<div class="schedule-button-title__icon _receiving-flowers__content">#1750B1</div>
+															<div class="schedule-button-title__text">
+																ITE balance
+															</div>
+														</div>
+														<div class="schedule-button-content">
+															<div class="schedule-button-content__title">
+																<span>3 286 409,13</span> ITE
+															</div>
+															<div class="schedule-button-content__number _receiving-interests__content">
+																25.73
+															</div>
+														</div>
+													</a>
+												</div>
 											</div>
 										</div>
 										<div class="dashboard-schedule-button">
-											<a href="#" class="dashboard-schedule-button__irem active">
+											<a href="#" class="dashboard-schedule-button__irem hover-transform active">
 												Deposit
 											</a>
-											<a href="#" class="dashboard-schedule-button__irem">
+											<a href="#" class="dashboard-schedule-button__irem hover-transform">
 												Withdraw
 											</a>
-											<a href="#" class="dashboard-schedule-button__irem">
+											<a href="#" class="dashboard-schedule-button__irem hover-transform">
 												Swap
 											</a>
 										</div>
@@ -263,7 +309,7 @@
 										</div>
 										<div class="dashboard-invest__wrapper">
 											<div class="dashboard-invest__title">
-												Invest balance
+												Invest <span>balance</span>
 											</div>
 											<div class="dashboard-invest__content">
 												8,524.12 USDT
@@ -273,14 +319,17 @@
 											</div>
 										</div>
 										<div class="dashboard-invest__buttons">
-											<a href="#" class="dashboard-invest__button">
+											<a href="#" class="dashboard-invest__button hover-transform">
 												<img src="img/dashboard/icon/DownloadSimple.svg" alt="">
+												Deposit
 											</a>
-											<a href="#" class="dashboard-invest__button">
+											<a href="#" class="dashboard-invest__button hover-transform">
 												<img src="img/dashboard/icon/UploadSimple.svg" alt="">
+												Withdraw
 											</a>
-											<a href="#" class="dashboard-invest__button">
+											<a href="#" class="dashboard-invest__button hover-transform">
 												<img src="img/dashboard/icon/Swap.svg" alt="">
+												Swap
 											</a>
 										</div>
 									</div>
@@ -291,7 +340,7 @@
 										<div class="dashboard-token__wrapper">
 											<div class="dashboard-token__blok">
 												<div class="dashboard-token__title">
-													Token balance
+													Token <span>balance</span>
 												</div>
 												<div class="dashboard-token__content">
 													1 056 212.00 ITE
@@ -300,7 +349,7 @@
 													</span>
 												</div>
 											</div>
-											<div class="dashboard-token__blok">
+											<div data-da=".dashboard-token, 640, last" class="dashboard-token__blok">
 												<div class="dashboard-token__title">
 													Reward
 												</div>
@@ -327,7 +376,7 @@
 										<div class="dashboard-partner__wrapper">
 											<div class="dashboard-partner__blok">
 												<div class="dashboard-partner__title">
-													Partner balance
+													Partner <span>balance</span>
 												</div>
 												<div class="dashboard-partner__content">
 													1,218.44 USDT
@@ -336,7 +385,7 @@
 													</span>
 												</div>
 											</div>
-											<div class="dashboard-partner-withdraw _withdraw">
+											<div data-da=".dashboard-partner, 640, last" class="dashboard-partner-withdraw _withdraw">
 												<h5 class="dashboard-partner-withdraw__title">
 													Withdraw limit
 													<span class="icon-Info"></span>
@@ -353,8 +402,9 @@
 											</div>
 										</div>
 										<div class="dashboard-partner__buttons">
-											<a href="#" class="dashboard-partner__button">
+											<a href="#" class="dashboard-partner__button hover-transform">
 												<img src="img/dashboard/icon/Swap.svg" alt="">
+												Swap
 											</a>
 										</div>
 									</div>
@@ -683,6 +733,8 @@
 			</div>
 		</div>
 
+		<!--<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>-->
+		<script src="libs/apexcharts.js" ></script>
 		<script src="js/custom.js"></script>
 	</body>
 </html>
