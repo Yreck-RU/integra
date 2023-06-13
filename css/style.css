@@ -86,8 +86,8 @@ body._lock {
 /*--------------------*/
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?skt65p");
-  src: url("../fonts/icomoon.eot?skt65p#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?skt65p") format("truetype"), url("../fonts/icomoon.woff?skt65p") format("woff"), url("../fonts/icomoon.svg?skt65p#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?hathb9");
+  src: url("../fonts/icomoon.eot?hathb9#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?hathb9") format("truetype"), url("../fonts/icomoon.woff?hathb9") format("woff"), url("../fonts/icomoon.svg?hathb9#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -186,6 +186,9 @@ body._lock {
 
 .icon-FileText:before {
   content: "\e91b"; }
+
+.icon-cog:before {
+  content: "\e994"; }
 
 .container {
   max-width: 1680px;
