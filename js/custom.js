@@ -95,6 +95,47 @@ if (timers) {
 
 
 
+
+
+
+
+//==================================================================================================================================================
+//Копирование ссылок - "Начало"
+//==================================================================================================================================================
+
+const copiaContents = document.querySelectorAll('._copia-content');
+
+if (copiaContents) {
+	for (let i = 0; i < copiaContents.length; i++) {
+		let copiaContent = copiaContents[i];
+		let copiaContentButton = copiaContent.querySelector('._copia-content__button');
+		let copiaContentWrapper = copiaContent.querySelector('._copia-content__content');
+
+		copiaContent.addEventListener("click", function (e) {
+			if (copiaContentWrapper.classList.contains('_input')) {
+				let copiaContentWrapperContent = copiaContentWrapper;
+				navigator.clipboard.writeText(copiaContentWrapperContent.value);
+			} else {
+				let copiaContentWrapperContent = copiaContentWrapper.innerText;
+				navigator.clipboard.writeText(copiaContentWrapperContent);
+			}
+		});
+	}
+}
+
+//==================================================================================================================================================
+//Копирование ссылок - "Конец"
+//==================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
 //==================================================================================================================================================
 //Линия - "Начало"
 //==================================================================================================================================================
@@ -242,14 +283,6 @@ if (schedule) {
 }
 
 
-
-
-const buttonS = document.querySelector('.buttonS');
-if (buttonS) {
-	buttonS.addEventListener("click", function (e) {
-		console.log(chart);
-	});
-}
 
 //==================================================================================================================================================
 //График - "Конец"
