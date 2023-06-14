@@ -128,9 +128,10 @@ if (copiaContents) {
 //==================================================================================================================================================
 
 
-
-
-
+/*
+let now = new Date();
+alert( now );
+*/
 
 
 
@@ -226,20 +227,20 @@ var options = {
 	dataLabels: {
 		enabled: false,
 	},
-	responsive: [{
+	/*responsive: [{
 		breakpoint: 2,
 		options: {
 			chart: {
 				width: 380,
 			},
 		}
-	}],
-	yaxis: {
+	}],*/
+	/*yaxis: {
 		axisBorder: {
 			show: false
 		},
-	},
-	states: {
+	},*/
+	/*states: {
 	    normal: {
 	        filter: {
 	            type: 'none',
@@ -260,11 +261,27 @@ var options = {
 	            value: 1,
 	        }
 	    },
-	}
+	}*/
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+/*====================*/
+
+let toolepItems = document.querySelectorAll('.apexcharts-legend-text');
+let toolepWrappers = document.querySelectorAll('._receiving-interests');
+
+if (toolepItems && toolepWrappers) {
+	for (let i = 0; i < toolepItems.length; i++) {
+		toolepItems[i].appendChild(toolepWrappers[i]);
+		//toolepWrappers[i].appendChild(toolepItems[i]);
+	}
+}
+
+/*====================*/
+
+
 
 
 const schedule = document.querySelector('.schedule');
@@ -279,7 +296,46 @@ if (schedule) {
 		let scheduleTitle = document.querySelector(".schedule-title");
 		scheduleTitle.style.height = `${height}px`;
 		scheduleTitle.style.width = `${height}px`;
+
 	}, 1200);
+	const ApexchartsTooltip = document.querySelector(".apexcharts-tooltip");
+	let apexchartsNumber;
+
+	if (ApexchartsTooltip) {
+		document.querySelector(".apexcharts-series").onmouseover = function(event) {
+			let timerTwo;
+			timerTwo = setInterval(function () {
+				if (ApexchartsTooltip.classList.contains('apexcharts-active')) {
+					apexchartsNumber = ApexchartsTooltip.querySelector(".apexcharts-tooltip-text-y-value").innerText;
+					//console.log(apexchartsNumber);
+					let receivingInterestNumbers = document.querySelectorAll("._receiving-interests");
+					for (let i = 0; i < receivingInterestNumbers.length; i++) {
+						let receivingInterestNumber = receivingInterestNumbers[i].querySelector("._receiving-interests__content").innerText;
+						if (+apexchartsNumber == +receivingInterestNumber) {
+							for (let i = 0; i < receivingInterestNumbers.length; i++) {
+								receivingInterestNumbers[i].classList.remove('_hover');
+							}
+							receivingInterestNumbers[i].classList.add('_hover');
+						}
+					}
+				} else {
+					let receivingInterestNumbers = document.querySelectorAll("._receiving-interests");
+					for (let i = 0; i < receivingInterestNumbers.length; i++) {
+						receivingInterestNumbers[i].classList.remove('_hover');
+					}
+				}
+			}, 10)
+
+		};
+		document.querySelector(".apexcharts-series").onmouseout = function(event) {
+			let timerinAniItemWrapper = setTimeout(function tick() {
+				let receivingInterestItems = document.querySelectorAll("._receiving-interests");
+				for (let i = 0; i < receivingInterestItems.length; i++) {
+					receivingInterestItems[i].classList.remove('_hover');
+				}
+			}, 100);
+		};
+	}
 }
 
 
