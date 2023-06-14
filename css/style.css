@@ -1261,9 +1261,8 @@ body._lock {
     -webkit-transform: translate(0%);
     -ms-transform: translate(0%);
     transform: translate(0%); }
-  @media (min-width: 1064px) {
-    .schedule .apexcharts-legend-text:hover .schedule-button__item {
-      background: #eff2f5; } }
+  .schedule .apexcharts-legend-text:hover .schedule-button__item {
+    background: #eff2f5; }
   @media (max-width: 1240px) {
     .schedule .apexcharts-align-center {
       top: 30px !important;
