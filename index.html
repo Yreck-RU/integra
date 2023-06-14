@@ -34,15 +34,34 @@
 							<a href="#" data-da=".dashboard-header, 1064, last" class="dashboard-logo">
 								<img src="img/Logo.svg" alt="">
 							</a>
-							<ul class="dashboard-ponel__list">
+							<ul data-da=".burger-list__body, 1064, last" data-spollers data-one-spoller class="dashboard-ponel__list">
 								<li class="dashboard-ponel-item">
-									<a href="#" class="active">
-										<span class="dashboard-ponel-item__icon icon-House"></span>
-										<span class="dashboard-ponel-item__text">
-											Finance
-										</span>
-										<img src="img/dashboard/CaretDown2.svg" alt="">
-									</a>
+									<div class="dashboard-ponel-spoeler">
+										<button tabindex="-1" type="button" data-spoller class="dashboard-ponel-spoeler__title">
+											<span class="dashboard-ponel-item__icon icon-House"></span>
+											<span class="dashboard-ponel-item__text">
+												Finance
+											</span>
+											<img src="img/dashboard/CaretDown2.svg" alt="">
+										</button>
+										<div class="dashboard-ponel-spoeler__list">
+											<div class="dashboard-ponel-spoeler__item">
+												<a href="#">
+													Deposit
+												</a>
+											</div>
+											<div class="dashboard-ponel-spoeler__item">
+												<a href="#">
+													Withdrawal
+												</a>
+											</div>
+											<div class="dashboard-ponel-spoeler__item">
+												<a href="#">
+													Swap
+												</a>
+											</div>
+										</div>
+									</div>
 								</li>
 								<li class="dashboard-ponel-item">
 									<a href="#">
@@ -413,7 +432,7 @@
 										</div>
 										<!--Обязательно вводить число в формате 00:00:00 -->
 										<div class="dashboard-token-timer _timer">
-											<span class="icon-Clock2"></span>
+											<span class="icon-Clock"></span>
 											Claim:
 											<span class="_timer-content">24:00:17</span>
 											<span class="icon-Info"></span>
