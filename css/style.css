@@ -1221,9 +1221,9 @@ body._lock {
     opacity: 0 !important;
     pointer-events: none !important; }
   .schedule .apexcharts-inner {
-    -webkit-transform: translate(0%) scale(0.47) !important;
-    -ms-transform: translate(0%) scale(0.47) !important;
-    transform: translate(0%) scale(0.47) !important;
+    -webkit-transform: translate(0%) scale(1) !important;
+    -ms-transform: translate(0%) scale(1) !important;
+    transform: translate(0%) scale(1) !important;
     width: 100%; }
   .schedule .apexcharts-pie > * {
     -webkit-transform: scale(1) !important;
@@ -1238,10 +1238,10 @@ body._lock {
     overflow: visible;
     top: 0 !important; }
   .schedule .apexcharts-legend-text {
-    font-size: 0 !important;
     padding-left: 0;
     margin-left: 0;
-    overflow: visible; }
+    overflow: visible;
+    display: block; }
   .schedule .apexcharts-legend-series {
     width: 121%;
     max-width: 121%;
@@ -1311,6 +1311,7 @@ body._lock {
   width: 0%;
   pointer-events: none;
   height: 100%;
+  overflow: hidden;
   font-size: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1330,7 +1331,8 @@ body._lock {
   margin-bottom: 6px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s; }
+  transition: all 0.3s ease 0s;
+  font-size: 0; }
   .schedule-button__item:last-child {
     margin-bottom: 0; }
   .schedule-button__item._hover {

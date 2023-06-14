@@ -214,12 +214,41 @@ if (receivingFlowers) {
 	}
 }
 
+
+
+/*====================*/
+
+/*let toolepItems = document.querySelectorAll('.apexcharts-legend-text');
+
+
+const toolepButtonWrapper = document.querySelector(".schedule-button");
+
+if (toolepItems && toolepWrappers) {
+
+}*/
+//for (let i = 0; i < toolepItems.length; i++) {
+	//let toolepItem = toolepItems[i].cloneNode(true);
+	//let clonedNode = toolepWrappers[i].cloneNode(true);
+	//console.log(clonedNode);
+	//clonedNode.appendChild(toolepWrappers[i]);
+	//toolepItems[i].appendChild(toolepWrappers[i]);
+//}
+
+/*====================*/
+
+
+
 /*series: [74.27, 25.73],*/
 /*['#16c784', '#1750b1']*/
 var options = {
 	series: receivingInterestsObgeg,
 	chart: {
 		type: 'donut',
+		/*tooltip: {
+			custom: function({series, seriesIndex, dataPointIndex, w}) {
+				return '<div class="arrow_box">' + '<span>' + series[seriesIndex][dataPointIndex] + '</span>' + '</div>';
+			}
+		}*/
 	},
 	fill: {
 		colors: receivingFlowersObgeg,
@@ -227,6 +256,57 @@ var options = {
 	dataLabels: {
 		enabled: false,
 	},
+	legend: {
+	  /*show: true,
+	  showForSingleSeries: false,
+	  showForNullSeries: true,
+	  showForZeroSeries: true,
+	  position: 'bottom',
+	  horizontalAlign: 'center', 
+	  floating: false,
+	  fontSize: '14px',
+	  fontFamily: 'Helvetica, Arial',
+	  fontWeight: 400,
+	  formatter: undefined,
+	  inverseOrder: false,
+	  width: undefined,
+	  height: undefined,
+	  tooltipHoverFormatter: undefined,
+	  customLegendItems: [],
+	  offsetX: 0,
+	  offsetY: 0,
+	  labels: {
+	      colors: undefined,
+	      useSeriesColors: false
+	  },
+	  markers: {
+	      width: 12,
+	      height: 12,
+	      strokeWidth: 0,
+	      strokeColor: '#fff',
+	      fillColors: undefined,
+	      radius: 12,
+	      customHTML: undefined,
+	      onClick: undefined,
+	      offsetX: 0,
+	      offsetY: 0
+	  },
+	  itemMargin: {
+	      horizontal: 5,
+	      vertical: 0
+	  },
+	  onItemClick: {
+	      toggleDataSeries: true
+	  },
+	  onItemHover: {
+	      highlightDataSeries: true
+	  },*/
+	  formatter: function(seriesName, opts) {
+	    return [
+			`<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: #1750B1;">#1750B1</div><div class="schedule-button-title__text">ITE balance</div></div><div class="schedule-button-content"><div class="schedule-button-content__title"><span>3 286 409,13</span> ITE</div><div class="schedule-button-content__number _receiving-interests__content">${opts.w.globals.series[opts.seriesIndex]}</div></div></div>`
+	    ]
+	  }
+	}
 	/*responsive: [{
 		breakpoint: 2,
 		options: {
@@ -267,19 +347,6 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
-/*====================*/
-
-let toolepItems = document.querySelectorAll('.apexcharts-legend-text');
-let toolepWrappers = document.querySelectorAll('._receiving-interests');
-
-if (toolepItems && toolepWrappers) {
-	for (let i = 0; i < toolepItems.length; i++) {
-		toolepItems[i].appendChild(toolepWrappers[i]);
-		//toolepWrappers[i].appendChild(toolepItems[i]);
-	}
-}
-
-/*====================*/
 
 
 
