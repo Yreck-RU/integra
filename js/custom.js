@@ -198,6 +198,12 @@ let receivingInterestsObgeg = [];
 const receivingFlowers = document.querySelectorAll('._receiving-flowers');
 let receivingFlowersObgeg = [];
 
+const receivingNumber = document.querySelectorAll('._receiving-number');
+let receivingNumberObgeg = [];
+
+const receivingTitles = document.querySelectorAll('._receiving-title');
+let receivingTitleObgeg = [];
+
 if (receivingInterests) {
 	for (let i = 0; i < receivingInterests.length; i++) {
 		let receivingInterest = receivingInterests[i];
@@ -213,8 +219,33 @@ if (receivingFlowers) {
 		receivingFlowersObgeg.push(receivingFlowerContent);
 	}
 }
+if (receivingNumber) {
+	for (let i = 0; i < receivingNumber.length; i++) {
+		let receivingNumbe = receivingNumber[i];
+		let receivingNumbeContent = receivingNumbe.innerText;
+		receivingNumberObgeg.push(receivingNumbeContent);
+	}
+}
+
+if (receivingTitles) {
+	for (let i = 0; i < receivingTitles.length; i++) {
+		let receivingTitle = receivingTitles[i];
+		let receivingTitleContent = receivingTitle.innerText;
+		receivingTitleObgeg.push(receivingTitleContent);
+	}
+}
 
 
+
+function colorOutput(n) {
+	return receivingFlowersObgeg[n];
+}
+function numberOutput(n) {
+	return receivingNumberObgeg[n];
+}
+function titleOutput(n) {
+	return receivingTitleObgeg[n];
+}
 
 /*====================*/
 
@@ -303,7 +334,7 @@ var options = {
 	  },*/
 	  formatter: function(seriesName, opts) {
 	    return [
-			`<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: #1750B1;">#1750B1</div><div class="schedule-button-title__text">ITE balance</div></div><div class="schedule-button-content"><div class="schedule-button-content__title"><span>3 286 409,13</span> ITE</div><div class="schedule-button-content__number _receiving-interests__content">${opts.w.globals.series[opts.seriesIndex]}</div></div></div>`
+			`<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: ${colorOutput(opts.seriesIndex)};"></div><div class="schedule-button-title__text">${titleOutput(opts.seriesIndex)}</div></div><div class="schedule-button-content"><div class="schedule-button-content__title">${numberOutput(opts.seriesIndex)}</div><div class="schedule-button-content__number _receiving-interests__content">${opts.w.globals.series[opts.seriesIndex]}</div></div></div>`
 	    ]
 	  }
 	}
@@ -365,17 +396,18 @@ if (schedule) {
 		scheduleTitle.style.width = `${height}px`;
 
 	}, 1200);
+
 	const ApexchartsTooltip = document.querySelector(".apexcharts-tooltip");
 	let apexchartsNumber;
 
 	if (ApexchartsTooltip) {
 		document.querySelector(".apexcharts-series").onmouseover = function(event) {
-			let timerTwo;
-			timerTwo = setInterval(function () {
+			let timerTwo = setInterval(function () {
 				if (ApexchartsTooltip.classList.contains('apexcharts-active')) {
 					apexchartsNumber = ApexchartsTooltip.querySelector(".apexcharts-tooltip-text-y-value").innerText;
 					//console.log(apexchartsNumber);
-					let receivingInterestNumbers = document.querySelectorAll("._receiving-interests");
+					let receivingInterestWapper = document.querySelector(".schedule");
+					let receivingInterestNumbers = receivingInterestWapper.querySelectorAll("._receiving-interests");
 					for (let i = 0; i < receivingInterestNumbers.length; i++) {
 						let receivingInterestNumber = receivingInterestNumbers[i].querySelector("._receiving-interests__content").innerText;
 						if (+apexchartsNumber == +receivingInterestNumber) {
@@ -400,7 +432,7 @@ if (schedule) {
 				for (let i = 0; i < receivingInterestItems.length; i++) {
 					receivingInterestItems[i].classList.remove('_hover');
 				}
-			}, 100);
+			}, 10);
 		};
 	}
 }
