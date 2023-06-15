@@ -275,11 +275,11 @@ var options = {
 	series: receivingInterestsObgeg,
 	chart: {
 		type: 'donut',
-		/*tooltip: {
-			custom: function({series, seriesIndex, dataPointIndex, w}) {
-				return '<div class="arrow_box">' + '<span>' + series[seriesIndex][dataPointIndex] + '</span>' + '</div>';
-			}
-		}*/
+		events: {
+	      zoomed: function(chartContext, { xaxis, yaxis }) {
+	        alert("l");
+	      }
+	    }
 	},
 	fill: {
 		colors: receivingFlowersObgeg,
@@ -288,91 +288,34 @@ var options = {
 		enabled: false,
 	},
 	legend: {
-	  /*show: true,
-	  showForSingleSeries: false,
-	  showForNullSeries: true,
-	  showForZeroSeries: true,
-	  position: 'bottom',
-	  horizontalAlign: 'center', 
-	  floating: false,
-	  fontSize: '14px',
-	  fontFamily: 'Helvetica, Arial',
-	  fontWeight: 400,
-	  formatter: undefined,
-	  inverseOrder: false,
-	  width: undefined,
-	  height: undefined,
-	  tooltipHoverFormatter: undefined,
-	  customLegendItems: [],
-	  offsetX: 0,
-	  offsetY: 0,
-	  labels: {
-	      colors: undefined,
-	      useSeriesColors: false
-	  },
-	  markers: {
-	      width: 12,
-	      height: 12,
-	      strokeWidth: 0,
-	      strokeColor: '#fff',
-	      fillColors: undefined,
-	      radius: 12,
-	      customHTML: undefined,
-	      onClick: undefined,
-	      offsetX: 0,
-	      offsetY: 0
-	  },
-	  itemMargin: {
-	      horizontal: 5,
-	      vertical: 0
-	  },
-	  onItemClick: {
-	      toggleDataSeries: true
-	  },
-	  onItemHover: {
-	      highlightDataSeries: true
-	  },*/
 	  formatter: function(seriesName, opts) {
 	    return [
 			`<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: ${colorOutput(opts.seriesIndex)};"></div><div class="schedule-button-title__text">${titleOutput(opts.seriesIndex)}</div></div><div class="schedule-button-content"><div class="schedule-button-content__title">${numberOutput(opts.seriesIndex)}</div><div class="schedule-button-content__number _receiving-interests__content">${opts.w.globals.series[opts.seriesIndex]}</div></div></div>`
 	    ]
-	  }
-	}
-	/*responsive: [{
-		breakpoint: 2,
-		options: {
-			chart: {
-				width: 380,
-			},
-		}
-	}],*/
-	/*yaxis: {
-		axisBorder: {
-			show: false
-		},
-	},*/
-	/*states: {
-	    normal: {
-	        filter: {
-	            type: 'none',
-	            value: 0.1,
-	        }
-	    },
-	    hover: {
-	    	allowMultipleDataPointsSelection: false,
-	        filter: {
-	            type: 'lighten',
-	            value: 0,
-	        }
-	    },
-	    active: {
-	        allowMultipleDataPointsSelection: false,
-	        filter: {
-	            type: 'darken',
-	            value: 1,
-	        }
-	    },
-	}*/
+	  },
+	  onItemClick: {
+          toggleDataSeries: false
+      },
+      onItemHover: {
+          highlightDataSeries: true,
+      },
+	},
+	states: {
+	  hover: {
+	   allowMultipleDataPointsSelection: false,
+	   filter: {
+	      type: 'darken',
+		  value: 1,
+	   }
+	  },
+	  active: {
+	  	allowMultipleDataPointsSelection: false,
+	  	zoomed: false,
+        filter: {
+          type: 'none'
+        }
+	  },
+	},
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
@@ -385,6 +328,20 @@ chart.render();
 const schedule = document.querySelector('.schedule');
 
 if (schedule) {
+	window.addEventListener('resize', (e) => {
+		schedule.classList.remove('_active');
+		let timerinAniItemWrapper = setTimeout(function tick() {
+			schedule.classList.add('_active');
+
+			let rect = document.querySelector(".apexcharts-inner").getBoundingClientRect();
+			let height = rect.height;
+
+			let scheduleTitle = document.querySelector(".schedule-title");
+			scheduleTitle.style.height = `${height}px`;
+			scheduleTitle.style.width = `${height}px`;
+
+		}, 1200);
+	});
 	let timerinAniItemWrapper = setTimeout(function tick() {
 		schedule.classList.add('_active');
 
@@ -396,6 +353,8 @@ if (schedule) {
 		scheduleTitle.style.width = `${height}px`;
 
 	}, 1200);
+
+
 
 	const ApexchartsTooltip = document.querySelector(".apexcharts-tooltip");
 	let apexchartsNumber;
@@ -417,6 +376,7 @@ if (schedule) {
 							receivingInterestNumbers[i].classList.add('_hover');
 						}
 					}
+					//let receivingInterestWapper = document.querySelector(".schedule");
 				} else {
 					let receivingInterestNumbers = document.querySelectorAll("._receiving-interests");
 					for (let i = 0; i < receivingInterestNumbers.length; i++) {
@@ -434,6 +394,22 @@ if (schedule) {
 				}
 			}, 10);
 		};
+
+		let receivingInterestItems = document.querySelectorAll(".apexcharts-legend-text");
+
+		if (receivingInterestItems) {
+			for (var i = 0; i < receivingInterestItems.length; i++) {
+				let receivingInterestItem = receivingInterestItems[i];
+				receivingInterestItem.onmouseover = function(event) {
+					let schedule = document.querySelector(".schedule");
+					schedule.classList.add('_hover');
+				}
+				receivingInterestItem.onmouseout = function(event) {
+					let schedule = document.querySelector(".schedule");
+					schedule.classList.remove('_hover');
+				}
+			}
+		}
 	}
 }
 
