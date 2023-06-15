@@ -573,7 +573,8 @@ body._lock {
   @media (max-width: 1064px) {
     .dashboard-body {
       padding-left: 0;
-      padding-bottom: 35px; } }
+      padding-bottom: 35px;
+      padding-top: 35px; } }
 
 .dashboard-header {
   margin-bottom: 15px;
@@ -592,10 +593,12 @@ body._lock {
     .dashboard-header {
       padding: 14px 20px;
       background: #fff;
-      margin: 0 -20px;
       margin-bottom: 24px;
-      position: relative;
-      z-index: 110; } }
+      position: fixed;
+      z-index: 110;
+      width: 100%;
+      top: 0;
+      left: 0; } }
   @media (max-width: 640px) {
     .dashboard-header {
       padding: 12px 14px; } }
@@ -1196,28 +1199,33 @@ body._lock {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 18px; }
-  @media (max-width: 620px) {
+  @media (max-width: 1440px) {
     .dashboard-schedule__flex {
       display: block; } }
 
 .dashboard-schedule__blok {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 47%;
-  flex: 0 0 47%; }
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
   .dashboard-schedule__blok > img {
     width: 100%; }
   .dashboard-schedule__blok.dashboard-schedule__blok_53 {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 51%;
-    flex: 0 0 51%;
+    -ms-flex: 0 0 320px;
+    flex: 0 0 320px;
     padding-top: 0px;
     padding-left: 9px;
     -webkit-transform: translateY(-4px);
     -ms-transform: translateY(-4px);
-    transform: translateY(-4px); }
+    transform: translateY(-4px);
+    max-width: 320px; }
   @media (max-width: 1580px) {
     .dashboard-schedule__blok {
       padding-left: 0px; } }
+  @media (max-width: 1440px) {
+    .dashboard-schedule__blok.dashboard-schedule__blok_53 {
+      margin-top: 20px;
+      padding-left: 0; } }
   @media (max-width: 640px) {
     .dashboard-schedule__blok:first-child {
       margin-bottom: 15px; }
@@ -1423,63 +1431,75 @@ body._lock {
   .schedule .apexcharts-legend-text:hover .schedule-button__item {
     background: #eff2f5; }
   @media (max-width: 1240px) {
-    .schedule .apexcharts-align-center {
-      top: 30px !important;
-      width: 100%;
-      max-width: 40%; }
-    .schedule .apexcharts-legend-series {
-      width: 100%;
-      max-width: 100%;
-      position: relative;
-      left: 0%; } }
+    .schedule {
+      /*& .apexcharts-align-center {
+			top: 30px !important;
+			width: 100%;
+			max-width: 40%
+		}
+		& .apexcharts-legend-series {
+			width: 100%;
+			max-width: 100%;
+			position: relative;
+			left: 0%;
+		}*/ } }
   @media (max-width: 1240px) {
     .schedule {
       max-height: 160px; } }
   @media (max-width: 1064px) {
-    .schedule .apexcharts-align-center {
-      top: 2.7vw !important;
-      width: 100%;
-      max-width: 20vw; }
-    .schedule .apexcharts-legend-series {
-      width: 100%;
-      max-width: 100%;
-      position: relative;
-      left: 0%; } }
+    .schedule {
+      /*& .apexcharts-align-center {
+			top: 2.7vw !important;
+			width: 100%;
+			max-width: 20vw;
+		}
+		& .apexcharts-legend-series {
+			width: 100%;
+			max-width: 100%;
+			position: relative;
+			left: 0%;
+		}*/ } }
   @media (max-width: 767px) {
-    .schedule .apexcharts-inner {
-      -webkit-transform: translate(0%) scale(1) !important;
-      -ms-transform: translate(0%) scale(1) !important;
-      transform: translate(0%) scale(1) !important; } }
+    .schedule {
+      /*& .apexcharts-inner {
+			transform: translate(0%) scale(1) !important;
+		}*/ } }
   @media (max-width: 620px) {
     .schedule {
       max-height: none;
-      height: 40vw; }
-      .schedule .apexcharts-align-center {
-        top: 8.7vw !important;
-        width: 100%;
-        max-width: 45vw; }
-      .schedule .apexcharts-legend-series {
-        width: 100%;
-        max-width: 100%;
-        position: relative;
-        left: 0%; } }
+      /*height: 40vw;
+
+		& .apexcharts-align-center {
+			top: 8.7vw !important;
+			width: 100%;
+			max-width: 45vw;
+		}
+		& .apexcharts-legend-series {
+			width: 100%;
+			max-width: 100%;
+			position: relative;
+			left: 0%;
+		}*/ } }
   @media (max-width: 380px) {
     .schedule {
       max-height: none;
-      height: 40vw; }
-      .schedule .apexcharts-inner {
-        -webkit-transform: translate(0%) scale(0.6) !important;
-        -ms-transform: translate(0%) scale(0.6) !important;
-        transform: translate(0%) scale(0.6) !important; }
-      .schedule .apexcharts-align-center {
-        top: 2.7vw !important;
-        width: 100%;
-        max-width: 25vw; }
-      .schedule .apexcharts-legend-series {
-        width: 210%;
-        max-width: 210%;
-        position: relative;
-        left: -110%; } }
+      /*height: 40vw;
+
+		& .apexcharts-inner {
+			transform: translate(0%) scale(0.6) !important;
+		}
+
+		& .apexcharts-align-center {
+			top: 2.7vw !important;
+			width: 100%;
+			max-width: 25vw;
+		}
+		& .apexcharts-legend-series {
+			width: 210%;
+			max-width: 210%;
+			position: relative;
+			left: -110%;
+		}*/ } }
 
 .schedule-title {
   position: absolute;
@@ -1583,11 +1603,11 @@ body._lock {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  color: #58667e; }
-  @media (max-width: 1480px) {
-    .schedule-button-title__text {
-      font-size: 8px;
-      line-height: 10px; } }
+  color: #58667e;
+  /*@media (max-width: 1480px) {
+		font-size: 8px;
+		line-height: 10px;
+	}*/ }
 
 .schedule-button-content {
   display: -webkit-box;
@@ -1613,17 +1633,17 @@ body._lock {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  /*@media (max-width: 1480px) {
+		font-size: 10px;
+		line-height: 12px;
+	}*/ }
   .schedule-button-content__title span {
     max-width: 46px;
     display: inline-block;
     overflow: hidden;
     margin-right: 2px;
     white-space: nowrap; }
-  @media (max-width: 1480px) {
-    .schedule-button-content__title {
-      font-size: 10px;
-      line-height: 12px; } }
 
 .schedule-button-content__number {
   font-family: Lato;
@@ -1631,13 +1651,13 @@ body._lock {
   font-weight: 700;
   line-height: 24px;
   color: #58667e;
-  padding-top: 1px; }
+  padding-top: 1px;
+  /*@media (max-width: 1480px) {
+		font-size: 10px;
+		line-height: 12px;
+	}*/ }
   .schedule-button-content__number:after {
     content: "%"; }
-  @media (max-width: 1480px) {
-    .schedule-button-content__number {
-      font-size: 10px;
-      line-height: 12px; } }
 
 .schedule-wrapper {
   /*@media (max-width: 640px) {
@@ -1988,7 +2008,7 @@ body._lock {
     background: #16c784; }
 
 .dashboard-boreber {
-  border-bottom: 2px dashed #eff2f5; }
+  border-bottom: 1px dashed #eff2f5; }
   .dashboard-boreber:last-child {
     border-bottom: none !important; }
   @media (max-width: 640px) {
@@ -2538,7 +2558,7 @@ body._lock {
 
 .dashboard-mb-ponel {
   display: none; }
-  @media (max-width: 767px) {
+  @media (max-width: 1064px) {
     .dashboard-mb-ponel {
       position: fixed;
       left: 0;
