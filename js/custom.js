@@ -275,11 +275,6 @@ var options = {
 	series: receivingInterestsObgeg,
 	chart: {
 		type: 'donut',
-		events: {
-	      zoomed: function(chartContext, { xaxis, yaxis }) {
-	        alert("l");
-	      }
-	    }
 	},
 	fill: {
 		colors: receivingFlowersObgeg,
@@ -316,6 +311,12 @@ var options = {
         }
 	  },
 	},
+	responsive: [{
+	    breakpoint: undefined,
+	    options: {
+
+	    },
+	}],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
