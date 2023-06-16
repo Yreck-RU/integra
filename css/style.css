@@ -2621,10 +2621,12 @@ body._lock {
 
 .table {
   background: rgba(0, 0, 0, 0.1);
-  padding: 40px; }
+  padding: 40px;
+  padding-bottom: 140px; }
   @media (max-width: 540px) {
     .table {
-      padding: 20px 14px; } }
+      padding: 20px 14px;
+      padding-bottom: 80px !important; } }
 
 .table__wrapper {
   max-width: 1400px;

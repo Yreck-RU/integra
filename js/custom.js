@@ -208,14 +208,14 @@ let receivingTitleObgeg = [];
 if (receivingInterests) {
 	for (let i = 0; i < receivingInterests.length; i++) {
 		let receivingInterest = receivingInterests[i];
-		let receivingInterestContent = +receivingInterest.querySelector('._receiving-interests__content').innerText.replace(/[^0-9,.]/g, ' ');
+		let receivingInterestContent = +receivingInterest.querySelector('._receiving-interests__content').textContent.replace(/[^0-9,.]/g, ' ');
 		receivingInterestsObgeg.push(receivingInterestContent);
 	}
 }
 if (receivingFlowers) {
 	for (let i = 0; i < receivingFlowers.length; i++) {
 		let receivingFlower = receivingFlowers[i];
-		let receivingFlowerContent = receivingFlower.querySelector('._receiving-flowers__content').innerText;
+		let receivingFlowerContent = receivingFlower.querySelector('._receiving-flowers__content').textContent;
 		receivingFlower.querySelector('._receiving-flowers__content').style.backgroundColor = receivingFlowerContent;
 		receivingFlowersObgeg.push(receivingFlowerContent);
 	}
@@ -223,7 +223,7 @@ if (receivingFlowers) {
 if (receivingNumber) {
 	for (let i = 0; i < receivingNumber.length; i++) {
 		let receivingNumbe = receivingNumber[i];
-		let receivingNumbeContent = receivingNumbe.innerText;
+		let receivingNumbeContent = receivingNumbe.textContent;
 		receivingNumberObgeg.push(receivingNumbeContent);
 	}
 }
@@ -231,7 +231,7 @@ if (receivingNumber) {
 if (receivingTitles) {
 	for (let i = 0; i < receivingTitles.length; i++) {
 		let receivingTitle = receivingTitles[i];
-		let receivingTitleContent = receivingTitle.innerText;
+		let receivingTitleContent = receivingTitle.textContent;
 		receivingTitleObgeg.push(receivingTitleContent);
 	}
 }
