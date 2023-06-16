@@ -192,7 +192,7 @@ if (iconMenu) {
 //График - "Начало"
 //==================================================================================================================================================
 
-const receivingInterests = document.querySelectorAll('._receiving-interests');
+/*const receivingInterests = document.querySelectorAll('._receiving-interests');
 let receivingInterestsObgeg = [];
 
 const receivingFlowers = document.querySelectorAll('._receiving-flowers');
@@ -245,7 +245,7 @@ function numberOutput(n) {
 }
 function titleOutput(n) {
 	return receivingTitleObgeg[n];
-}
+}*/
 
 /*====================*/
 
@@ -272,22 +272,22 @@ if (toolepItems && toolepWrappers) {
 /*series: [74.27, 25.73],*/
 /*['#16c784', '#1750b1']*/
 var options = {
-	series: receivingInterestsObgeg,
+	series: [74.27, 25.73],
 	chart: {
 		type: 'donut',
 	},
 	fill: {
-		colors: receivingFlowersObgeg,
+		colors: ['#16c784', '#1750b1'],
 	},
 	dataLabels: {
 		enabled: false,
 	},
 	legend: {
-	  formatter: function(seriesName, opts) {
+	  /*formatter: function(seriesName, opts) {
 	    return [
 			`<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: ${colorOutput(opts.seriesIndex)};"></div><div class="schedule-button-title__text">${titleOutput(opts.seriesIndex)}</div></div><div class="schedule-button-content"><div class="schedule-button-content__title">${numberOutput(opts.seriesIndex)}</div><div class="schedule-button-content__number _receiving-interests__content">${opts.w.globals.series[opts.seriesIndex]}</div></div></div>`
 	    ]
-	  },
+	  },*/
 	  onItemClick: {
           toggleDataSeries: false
       },
@@ -311,12 +311,6 @@ var options = {
         }
 	  },
 	},
-	responsive: [{
-	    breakpoint: undefined,
-	    options: {
-
-	    },
-	}],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
@@ -357,7 +351,7 @@ if (schedule) {
 
 
 
-	const ApexchartsTooltip = document.querySelector(".apexcharts-tooltip");
+	/*const ApexchartsTooltip = document.querySelector(".apexcharts-tooltip");
 	let apexchartsNumber;
 
 	if (ApexchartsTooltip) {
@@ -411,7 +405,7 @@ if (schedule) {
 				}
 			}
 		}
-	}
+	}*/
 }
 
 
