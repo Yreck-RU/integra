@@ -141,7 +141,7 @@ alert( now );
 //Линия - "Начало"
 //==================================================================================================================================================
 
-/*const withdraws = document.querySelectorAll('._withdraw');
+const withdraws = document.querySelectorAll('._withdraw');
 
 if (withdraws) {
 	for (let i = 0; i < withdraws.length; i++) {
@@ -152,10 +152,11 @@ if (withdraws) {
 
 		if (withdrawLine && withdrawMin && withdrawBig) {
 			let withdrawNumber = +withdrawMin / (+withdrawBig / 100);
-			withdrawLine.style.width = `${withdrawNumber}%`;
+			withdrawLine.style.width =  withdrawNumber + '%';
 		}
 	}
-}*/
+}
+//return '(' + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
 
 //==================================================================================================================================================
 //Линия - "Конец"
@@ -192,7 +193,7 @@ if (iconMenu) {
 //График - "Начало"
 //==================================================================================================================================================
 
-/*const receivingInterests = document.querySelectorAll('._receiving-interests');
+const receivingInterests = document.querySelectorAll('._receiving-interests');
 let receivingInterestsObgeg = [];
 
 const receivingFlowers = document.querySelectorAll('._receiving-flowers');
@@ -215,7 +216,7 @@ if (receivingFlowers) {
 	for (let i = 0; i < receivingFlowers.length; i++) {
 		let receivingFlower = receivingFlowers[i];
 		let receivingFlowerContent = receivingFlower.querySelector('._receiving-flowers__content').innerText;
-		receivingFlower.querySelector('._receiving-flowers__content').style.backgroundColor = `${receivingFlowerContent}`;
+		receivingFlower.querySelector('._receiving-flowers__content').style.backgroundColor = receivingFlowerContent;
 		receivingFlowersObgeg.push(receivingFlowerContent);
 	}
 }
@@ -245,27 +246,11 @@ function numberOutput(n) {
 }
 function titleOutput(n) {
 	return receivingTitleObgeg[n];
-}*/
-
-/*====================*/
-
-/*let toolepItems = document.querySelectorAll('.apexcharts-legend-text');
+}
 
 
-const toolepButtonWrapper = document.querySelector(".schedule-button");
 
-if (toolepItems && toolepWrappers) {
-
-}*/
-//for (let i = 0; i < toolepItems.length; i++) {
-	//let toolepItem = toolepItems[i].cloneNode(true);
-	//let clonedNode = toolepWrappers[i].cloneNode(true);
-	//console.log(clonedNode);
-	//clonedNode.appendChild(toolepWrappers[i]);
-	//toolepItems[i].appendChild(toolepWrappers[i]);
-//}
-
-/*====================*/
+/*===================================================*/
 
 
 
@@ -283,11 +268,11 @@ var options = {
 		enabled: false,
 	},
 	legend: {
-	  /*formatter: function(seriesName, opts) {
+	  formatter: function(seriesName, opts) {
 	    return [
-			`<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: ${colorOutput(opts.seriesIndex)};"></div><div class="schedule-button-title__text">${titleOutput(opts.seriesIndex)}</div></div><div class="schedule-button-content"><div class="schedule-button-content__title">${numberOutput(opts.seriesIndex)}</div><div class="schedule-button-content__number _receiving-interests__content">${opts.w.globals.series[opts.seriesIndex]}</div></div></div>`
+			'<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: ' + colorOutput(opts.seriesIndex) +'"></div><div class="schedule-button-title__text">' + titleOutput(opts.seriesIndex) + '</div></div><div class="schedule-button-content"><div class="schedule-button-content__title">' + numberOutput(opts.seriesIndex) + '</div><div class="schedule-button-content__number _receiving-interests__content">' + opts.w.globals.series[opts.seriesIndex] + '</div></div></div>'
 	    ]
-	  },*/
+	  },
 	  onItemClick: {
           toggleDataSeries: false
       },
