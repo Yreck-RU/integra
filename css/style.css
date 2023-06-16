@@ -2618,3 +2618,44 @@ body._lock {
   .dashboard-mb-ponel__item a.active {
     background: rgba(23, 80, 177, 0.08);
     color: #1750b1; }
+
+.table {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 40px; }
+  @media (max-width: 540px) {
+    .table {
+      padding: 20px 14px; } }
+
+.table__wrapper {
+  max-width: 1400px;
+  margin: 0 auto; }
+
+.table-item {
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  margin-bottom: 14px; }
+  .table-item:last-child {
+    margin-bottom: 0; }
+
+.table-item__title {
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #05060f;
+  margin-bottom: 8px; }
+  @media (max-width: 1680px) {
+    .table-item__title {
+      font-size: calc(18px + 6 * ((100vw - 320px) / 1360)); } }
+  @media (max-width: 1680px) {
+    .table-item__title {
+      line-height: calc(18px + 6 * ((100vw - 320px) / 1360)); } }
+
+.table-item__body {
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #05060f; }

@@ -270,7 +270,7 @@ var options = {
 	legend: {
 	  formatter: function(seriesName, opts) {
 	    return [
-			'<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: ' + colorOutput(opts.seriesIndex) +'"></div><div class="schedule-button-title__text">' + titleOutput(opts.seriesIndex) + '</div></div><div class="schedule-button-content"><div class="schedule-button-content__title">' + numberOutput(opts.seriesIndex) + '</div><div class="schedule-button-content__number _receiving-interests__content">' + opts.w.globals.series[opts.seriesIndex] + '</div></div></div>'
+			'<div class="schedule-button__item _receiving-interests _receiving-flowers"><div class="schedule-button-title"><div class="schedule-button-title__icon _receiving-flowers__content" style="background: #222222"></div><div class="schedule-button-title__text">Title</div></div><div class="schedule-button-content"><div class="schedule-button-content__title">3 286 409,13 ITE</div><div class="schedule-button-content__number _receiving-interests__content">-0</div></div></div>'
 	    ]
 	  },
 	  onItemClick: {
@@ -393,6 +393,30 @@ if (schedule) {
 	}
 }
 */
+
+
+
+//let tableItems = document.querySelectorAll('._table-item');
+
+
+let tableItemColor = document.querySelector('._table-item_color');
+if (tableItemColor) {
+	tableItemColor.textContent = receivingFlowersObgeg + '';
+}
+
+let tableItemInterest = document.querySelector('._table-item_interest');
+if (tableItemInterest) {
+	tableItemInterest.textContent = receivingInterestsObgeg + '';
+}
+
+let tableItemNumber = document.querySelector('._table-item_number');
+if (tableItemNumber) {
+	tableItemNumber.textContent = receivingNumberObgeg + '';
+}
+let tableItemTitle = document.querySelector('._table-item_title');
+if (tableItemTitle) {
+	tableItemTitle.textContent = receivingTitleObgeg + '';
+}
 
 
 //==================================================================================================================================================
