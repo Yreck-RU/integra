@@ -141,7 +141,7 @@ alert( now );
 //Линия - "Начало"
 //==================================================================================================================================================
 
-const withdraws = document.querySelectorAll('._withdraw');
+/*const withdraws = document.querySelectorAll('._withdraw');
 
 if (withdraws) {
 	for (let i = 0; i < withdraws.length; i++) {
@@ -155,7 +155,7 @@ if (withdraws) {
 			withdrawLine.style.width = `${withdrawNumber}%`;
 		}
 	}
-}
+}*/
 
 //==================================================================================================================================================
 //Линия - "Конец"
@@ -319,7 +319,7 @@ chart.render();
 
 
 
-
+/*
 const schedule = document.querySelector('.schedule');
 
 if (schedule) {
@@ -351,7 +351,7 @@ if (schedule) {
 
 
 
-	/*const ApexchartsTooltip = document.querySelector(".apexcharts-tooltip");
+	const ApexchartsTooltip = document.querySelector(".apexcharts-tooltip");
 	let apexchartsNumber;
 
 	if (ApexchartsTooltip) {
@@ -405,15 +405,14 @@ if (schedule) {
 				}
 			}
 		}
-	}*/
+	}
 }
-
+*/
 
 
 //==================================================================================================================================================
 //График - "Конец"
 //==================================================================================================================================================
-
 
 
 
