@@ -396,29 +396,6 @@ if (schedule) {
 
 
 
-//let tableItems = document.querySelectorAll('._table-item');
-
-
-let tableItemColor = document.querySelector('._table-item_color');
-if (tableItemColor) {
-	tableItemColor.textContent = receivingFlowersObgeg + '';
-}
-
-let tableItemInterest = document.querySelector('._table-item_interest');
-if (tableItemInterest) {
-	tableItemInterest.textContent = receivingInterestsObgeg + '';
-}
-
-let tableItemNumber = document.querySelector('._table-item_number');
-if (tableItemNumber) {
-	tableItemNumber.textContent = receivingNumberObgeg + '';
-}
-let tableItemTitle = document.querySelector('._table-item_title');
-if (tableItemTitle) {
-	tableItemTitle.textContent = receivingTitleObgeg + '';
-}
-
-
 //==================================================================================================================================================
 //График - "Конец"
 //==================================================================================================================================================
