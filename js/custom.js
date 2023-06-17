@@ -260,6 +260,30 @@ var options = {
 	series: [74.27, 25.73],
 	chart: {
 		type: 'donut',
+		events: {
+			animationEnd: function (chartContext, options) {
+				window.addEventListener('resize', (e) => {
+					//schedule.classList.remove('_active');
+					let timerinAniItemWrapper = setTimeout(function tick() {
+						//schedule.classList.add('_active');
+						let rect = document.querySelector(".apexcharts-inner").getBoundingClientRect();
+						let height = rect.height;
+						let scheduleTitle = document.querySelector(".schedule-title");
+						scheduleTitle.style.height = `${height}px`;
+						scheduleTitle.style.width = `${height}px`;
+					}, 300);
+				});
+				let timerinAniItemWrapper = setTimeout(function tick() {
+					schedule.classList.add('_active');
+					let rect = document.querySelector(".apexcharts-inner").getBoundingClientRect();
+					let height = rect.height;
+					let scheduleTitle = document.querySelector(".schedule-title");
+					scheduleTitle.style.height = `${height}px`;
+					scheduleTitle.style.width = `${height}px`;
+				}, 300);
+
+			}
+		}
 	},
 	fill: {
 		colors: ['#16c784', '#1750b1'],
@@ -308,31 +332,6 @@ chart.render();
 const schedule = document.querySelector('.schedule');
 
 if (schedule) {
-	window.addEventListener('resize', (e) => {
-		schedule.classList.remove('_active');
-		let timerinAniItemWrapper = setTimeout(function tick() {
-			schedule.classList.add('_active');
-
-			let rect = document.querySelector(".apexcharts-inner").getBoundingClientRect();
-			let height = rect.height;
-
-			let scheduleTitle = document.querySelector(".schedule-title");
-			scheduleTitle.style.height = `${height}px`;
-			scheduleTitle.style.width = `${height}px`;
-
-		}, 1200);
-	});
-	let timerinAniItemWrapper = setTimeout(function tick() {
-		schedule.classList.add('_active');
-
-		let rect = document.querySelector(".apexcharts-inner").getBoundingClientRect();
-		let height = rect.height;
-
-		let scheduleTitle = document.querySelector(".schedule-title");
-		scheduleTitle.style.height = `${height}px`;
-		scheduleTitle.style.width = `${height}px`;
-
-	}, 1200);
 
 
 
