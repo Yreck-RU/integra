@@ -1099,7 +1099,8 @@ body._lock {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
 
 /*===========*/
 .dashboard-header-calendar {
@@ -1178,7 +1179,8 @@ body._lock {
   padding: 19px 27px;
   border: 1px solid #eff2f5;
   background: #fff;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  overflow: hidden; }
   .dashboard-body-blok__item.dashboard-body-blok__item_serch {
     padding: 19px 27px 23px 27px; }
   .dashboard-body-blok__item:first-child {
@@ -1219,8 +1221,6 @@ body._lock {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 320px;
     flex: 0 0 320px;
-    padding-top: 0px;
-    padding-left: 9px;
     -webkit-transform: translateY(-4px);
     -ms-transform: translateY(-4px);
     transform: translateY(-4px);
@@ -1345,9 +1345,10 @@ body._lock {
   font-family: Lato;
   font-size: 14px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 16px;
   color: #05060f;
-  height: 40px;
+  min-height: 40px;
+  padding: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1367,9 +1368,6 @@ body._lock {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  -webkit-transform: translateY(-15%);
-  -ms-transform: translateY(-15%);
-  transform: translateY(-15%);
   max-width: 100%;
   max-height: 118px;
   height: 120px; }
@@ -1394,11 +1392,10 @@ body._lock {
   .schedule .apexcharts-tooltip {
     opacity: 0 !important;
     pointer-events: none !important; }
-  .schedule .apexcharts-inner {
-    -webkit-transform: translate(0%) scale(0.85) !important;
-    -ms-transform: translate(0%) scale(0.85) !important;
-    transform: translate(0%) scale(0.85) !important;
-    width: 100%; }
+  .schedule._active .apexcharts-inner {
+    -webkit-transform: translate(0%, 0%) scale(0.85) !important;
+    -ms-transform: translate(0%, 0%) scale(0.85) !important;
+    transform: translate(0%, 0%) scale(0.85) !important; }
   .schedule .apexcharts-pie > * {
     -webkit-transform: scale(1) !important;
     -ms-transform: scale(1) !important;
@@ -1513,10 +1510,13 @@ body._lock {
 			left: -110%;
 		}*/ } }
 
-.schedule-title {
+.schedule._active .schedule-title {
   position: absolute;
-  left: 1%;
-  top: 1%;
+  left: 0%;
+  top: 0%;
+  -webkit-transform: translate(3px, 5px);
+  -ms-transform: translate(3px, 5px);
+  transform: translate(3px, 5px);
   font-size: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1532,27 +1532,31 @@ body._lock {
   -ms-flex-direction: column;
   flex-direction: column;
   pointer-events: none; }
+  @media (min-width: 340px) {
+    .schedule._active .schedule-title {
+      width: 120px !important;
+      height: 114px !important; } }
   @media (max-width: 767px) {
-    .schedule-title {
+    .schedule._active .schedule-title {
       left: auto;
       right: -0.5%; } }
   @media (max-width: 340px) {
-    .schedule-title {
+    .schedule._active .schedule-title {
       right: 0.5%; } }
 
 .schedule-title__title {
   font-family: Lato;
   font-size: 12px;
   font-weight: 700;
-  line-height: 16px;
-  margin-bottom: 3px;
+  line-height: 12px;
+  margin-bottom: 6px;
   color: #05060f; }
 
 .schedule-title__text {
   font-family: Lato;
   font-size: 12px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 12px;
   color: #58667e; }
 
 .schedule-button {

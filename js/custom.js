@@ -266,7 +266,9 @@ var options = {
 					let timerinAniItemWrapper = setTimeout(function tick() {
 						//schedule.classList.add('_active');
 						let rect = document.querySelector(".apexcharts-inner").getBoundingClientRect();
+						console.log(rect);
 						let height = rect.height;
+						let width = rect.width;
 						let scheduleTitle = document.querySelector(".schedule-title");
 						scheduleTitle.style.height = `${height}px`;
 						scheduleTitle.style.width = `${height}px`;
@@ -275,11 +277,13 @@ var options = {
 				let timerinAniItemWrapper = setTimeout(function tick() {
 					schedule.classList.add('_active');
 					let rect = document.querySelector(".apexcharts-inner").getBoundingClientRect();
+					console.log(rect);
 					let height = rect.height;
+					let width = rect.width;
 					let scheduleTitle = document.querySelector(".schedule-title");
 					scheduleTitle.style.height = `${height}px`;
 					scheduleTitle.style.width = `${height}px`;
-				}, 300);
+				}, 500);
 			},
 			mouseMove: function(event, chartContext, config) {
 				let apexchartsNumber;
