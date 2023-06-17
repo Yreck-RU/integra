@@ -1349,6 +1349,7 @@ body._lock {
   color: #05060f;
   min-height: 40px;
   padding: 4px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2014,10 +2015,12 @@ body._lock {
   font-family: Lato;
   font-size: 14px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 16px;
   margin-bottom: 5px;
   color: #05060f;
-  margin-bottom: 4px; }
+  margin-bottom: 4px;
+  text-align: right;
+  padding-left: 12px; }
   .dashboard-stor-item__number.dashboard-stor-item__number_red {
     color: #ea3943; }
 
@@ -2166,7 +2169,7 @@ body._lock {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 32px;
   flex: 0 0 32px;
-  height: 32px;
+  min-height: 32px;
   border-radius: 12px;
   margin-left: 6px;
   background: #eff2f5;
@@ -2291,6 +2294,7 @@ body._lock {
   font-family: Lato;
   font-size: 14px;
   font-weight: 400;
+  line-height: 16px;
   color: #58667e;
   margin-bottom: 8px; }
   @media (max-width: 640px) {
@@ -2304,7 +2308,7 @@ body._lock {
   font-family: Lato;
   font-size: 14px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 16px;
   color: #05060f; }
   .dashboard-token__content.dashboard-token__content_grin {
     color: #16c784; }
@@ -2316,7 +2320,7 @@ body._lock {
   font-family: Lato;
   font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 16px;
   color: #ebb324;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2436,7 +2440,7 @@ body._lock {
   font-family: Lato;
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 16px;
   color: #58667e;
   margin-bottom: 6px; }
   @media (max-width: 640px) {
@@ -2450,7 +2454,7 @@ body._lock {
   font-family: Lato;
   font-size: 14px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 16px;
   color: #05060f; }
 
 .dashboard-partner__well {
@@ -2485,7 +2489,7 @@ body._lock {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 32px;
   flex: 0 0 32px;
-  height: 32px;
+  min-height: 32px;
   border-radius: 12px;
   margin-left: 6px;
   background: #eff2f5;
@@ -2507,8 +2511,9 @@ body._lock {
       font-family: Lato;
       font-size: 14px;
       font-weight: 600;
-      line-height: 24px;
-      color: #05060F; }
+      line-height: 16px;
+      color: #05060F;
+      padding: 4px; }
       .dashboard-partner__button img {
         max-height: 0;
         max-width: 0;
@@ -2590,7 +2595,7 @@ body._lock {
   font-family: Lato;
   font-size: 14px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 16px;
   color: #05060f;
   padding-left: 8px; }
 
