@@ -1908,6 +1908,7 @@ body._lock {
     position: absolute;
     right: auto;
     left: -100%;
+    opacity: 0;
     top: 0; }
   .dashboard-stor__wrapper._active > *:last-child {
     position: relative;
@@ -2192,7 +2193,7 @@ body._lock {
       font-family: Lato;
       font-size: 14px;
       font-weight: 600;
-      line-height: 24px;
+      line-height: 16px;
       color: #05060F; }
       .dashboard-invest__button img {
         max-height: 0;
