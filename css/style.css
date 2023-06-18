@@ -1724,9 +1724,9 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1746,18 +1746,25 @@ body._lock {
       padding: 0;
       margin: 8px 0;
       border-right: none;
-      padding-right: 7px;
+      padding-right: 40px;
       font-size: 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; } }
+  @media (max-width: 1620px) and (max-width: 1680px) {
+    .dashboard-body-check__item {
+      padding-right: calc(7px + 33 * ((100vw - 320px) / 1360)); } }
+  @media (max-width: 1620px) {
       .dashboard-body-check__item:nth-child(2n) {
         border-left: 1px dashed #eff2f5;
-        padding-left: 7px;
+        padding-left: 40px;
         padding-right: 0; } }
+    @media (max-width: 1620px) and (max-width: 1680px) {
+      .dashboard-body-check__item:nth-child(2n) {
+        padding-left: calc(7px + 33 * ((100vw - 320px) / 1360)); } }
 
 .dashboard-body-check__container {
   font-size: 0;
