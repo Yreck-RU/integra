@@ -1434,6 +1434,13 @@ body._lock {
     transform: translate(0%); }
   .schedule .apexcharts-legend-text:hover .schedule-button__item {
     background: #eff2f5; }
+  .schedule .schedule-title {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+  .schedule._hover .schedule-title,
+  .schedule._scheduleHover .schedule-title {
+    opacity: 0; }
   @media (max-width: 1240px) {
     .schedule {
       /*& .apexcharts-align-center {
@@ -2339,6 +2346,12 @@ body._lock {
   padding: 4px 12px;
   border-radius: 12px;
   background: #fff0c9; }
+  .dashboard-token-timer .icon-Clock {
+    font-size: 15px;
+    margin-right: 3px;
+    -webkit-transform: translateY(-0.5px);
+    -ms-transform: translateY(-0.5px);
+    transform: translateY(-0.5px); }
   .dashboard-token-timer .icon-Clock2 {
     font-size: 16px;
     margin-right: 4px; }
@@ -2606,6 +2619,8 @@ body._lock {
   line-height: 16px;
   color: #05060f;
   padding-left: 8px; }
+  .dashboard-partner-withdraw__number ._withdraw-big {
+    margin-right: 3px; }
 
 .dashboard-mb-ponel {
   display: none; }

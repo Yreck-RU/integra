@@ -77,7 +77,23 @@ if (timers) {
 				clearInterval(timer);
 				alert("Время закончилось");
 			} else {
-				let strTimer = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
+				hour = Math.trunc(hour);
+				minutes = Math.trunc(minutes);
+				seconds = Math.trunc(seconds);
+
+				hour = String(hour);
+				if (hour.length < 2) {
+					hour = '0' + hour;
+				}
+				minutes = String(minutes);
+				if (minutes.length < 2) {
+					minutes = '0' + minutes;
+				}
+				seconds = String(seconds);
+				if (seconds.length < 2) {
+					seconds = '0' + seconds;
+				}
+				let strTimer = `${hour}:${minutes}:${seconds}`;
 				timerShow.innerHTML = strTimer;
 			}
 			--timeMinut;
@@ -301,8 +317,10 @@ var options = {
 									if (+apexchartsNumber == +receivingInterestNumber) {
 										for (let i = 0; i < receivingInterestNumbers.length; i++) {
 											receivingInterestNumbers[i].classList.remove('_hover');
+											//document.querySelector(".schedule").classList.remove('_scheduleHover');
 										}
 										receivingInterestNumbers[i].classList.add('_hover');
+										document.querySelector(".schedule").classList.add('_scheduleHover');
 									}
 								}
 								//let receivingInterestWapper = document.querySelector(".schedule");
@@ -310,10 +328,10 @@ var options = {
 								let receivingInterestNumbers = document.querySelectorAll("._receiving-interests");
 								for (let i = 0; i < receivingInterestNumbers.length; i++) {
 									receivingInterestNumbers[i].classList.remove('_hover');
+									document.querySelector(".schedule").classList.remove('_scheduleHover');
 								}
 							}
 						}, 10)
-
 					};
 					document.querySelector(".apexcharts-series").onmouseout = function(event) {
 						let timerinAniItemWrapper = setTimeout(function tick() {
