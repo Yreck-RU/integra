@@ -480,10 +480,14 @@ body._lock {
   font-weight: 600;
   line-height: 14px;
   padding: 5px 0 !important;
-  padding-left: 2px !important;
+  padding-left: 10px !important;
   display: block;
   color: #58667e;
   border-radius: 3px 0 0 3px; }
+
+@media (max-width: 1064px) {
+  .dashboard-ponel-spoeler__item a {
+    padding-left: 3px !important; } }
 
 /*===============================*/
 @media (min-width: 1064.1px) {
@@ -732,12 +736,32 @@ body._lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 30px; }
+  margin-right: 30px;
+  cursor: pointer; }
+  @media (min-width: 1064px) {
+    .dashboard-header-langvig {
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+      .dashboard-header-langvig:hover .dashboard-header-langvig__icon {
+        color: #1750b1; }
+      .dashboard-header-langvig:hover {
+        -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+        transform: translateY(-1px); }
+      .dashboard-header-langvig:active {
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 0.8; } }
 
 .dashboard-header-langvig__icon {
   font-size: 17px;
   color: #58667e;
-  margin-right: 6px; }
+  margin-right: 6px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
 
 .dashboard-header-langvig__text {
   font-family: Lato;
@@ -1225,6 +1249,18 @@ body._lock {
     -ms-transform: translateY(-4px);
     transform: translateY(-4px);
     max-width: 320px; }
+  .dashboard-schedule__blok:before {
+    content: "";
+    display: block;
+    height: 90%;
+    border-left: 1px dashed #eff2f5;
+    width: 1px;
+    position: absolute;
+    left: -7px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
   @media (max-width: 1580px) {
     .dashboard-schedule__blok {
       padding-left: 0px; } }
