@@ -127,13 +127,18 @@ if (copiaContents) {
 		let copiaContentButton = copiaContent.querySelector('._copia-content__button');
 		let copiaContentWrapper = copiaContent.querySelector('._copia-content__content');
 
-		copiaContent.addEventListener("click", function (e) {
+		copiaContentButton.addEventListener("click", function (e) {
 			if (copiaContentWrapper.classList.contains('_input')) {
 				let copiaContentWrapperContent = copiaContentWrapper;
 				navigator.clipboard.writeText(copiaContentWrapperContent.value);
 			} else {
 				let copiaContentWrapperContent = copiaContentWrapper.innerText;
 				navigator.clipboard.writeText(copiaContentWrapperContent);
+				copiaContent.classList.add('_active');
+
+				let timerinCopiaContent = setTimeout(function tick() {
+					copiaContent.classList.remove('_active');
+				}, 5000);
 			}
 		});
 	}
@@ -267,8 +272,19 @@ function titleOutput(n) {
 
 
 /*===================================================*/
-
+let scheduleTitle =  document.querySelector("._schedule-title__content");
 const schedule = document.querySelector('.schedule');
+
+function firstWord(str) {
+  for (var chr, result = '', i = 0; i < str.length; i++) {
+    chr = str.charAt(i);
+    if (EXCL_SYMBOLS.includes(chr.toLowerCase()))
+      break;
+    else
+      result += chr;
+  }
+  return result;
+}
 /*series: [74.27, 25.73],*/
 /*['#16c784', '#1750b1']*/
 var options = {
@@ -331,6 +347,12 @@ var options = {
 									document.querySelector(".schedule").classList.remove('_scheduleHover');
 								}
 							}
+							let apexchartsHover = schedule.querySelector(".schedule-button__item._hover");
+							if (scheduleTitle && apexchartsHover) {
+								let apexchartsTitle = apexchartsHover.querySelector(".schedule-button-title__text").innerText.match(/[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Lm}\p{Mn}\p{Nd}\p{Pc}']+/u)[0];
+								//console.log(apexchartsTitle);
+								scheduleTitle.innerText = "" + apexchartsTitle;
+							}
 						}, 10)
 					};
 					document.querySelector(".apexcharts-series").onmouseout = function(event) {
@@ -350,6 +372,12 @@ var options = {
 							receivingInterestItem.onmouseover = function(event) {
 								let schedule = document.querySelector(".schedule");
 								schedule.classList.add('_hover');
+								receivingInterestItem.querySelector(".schedule-button__item").classList.add('_hover');
+								let apexchartsHover = schedule.querySelector(".schedule-button__item._hover");
+								if (scheduleTitle && apexchartsHover) {
+									let apexchartsTitle = apexchartsHover.querySelector(".schedule-button-title__text").innerText.match(/[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Lm}\p{Mn}\p{Nd}\p{Pc}']+/u)[0];
+									scheduleTitle.innerText = "" + apexchartsTitle;
+								}
 							}
 							receivingInterestItem.onmouseout = function(event) {
 								let schedule = document.querySelector(".schedule");
@@ -773,6 +801,50 @@ let _slideToggle = (target, duration = 500) => {
 //Спойлеры - "Конец"
 //==================================================================================================================================================
 
+
+
+
+
+
+
+//==================================================================================================================================================
+//Всплывающие окна - "Начало"
+//==================================================================================================================================================
+
+
+const protrudingWindows = document.querySelectorAll('[data-protruding]');
+if (protrudingWindows.length > 0) {
+	for (let i = 0; i < protrudingWindows.length; i++) {
+		let protrudingWindow = protrudingWindows[i];
+		let protrudingWindowContent = document.querySelector(`.${protrudingWindow.dataset.protruding}`);
+		let protrudingWindowExit = protrudingWindowContent.querySelector('._protruding-window-exit');
+
+		if (protrudingWindowExit) {
+			protrudingWindowExit.addEventListener("click", function (e) {
+				protrudingWindow.classList.remove('_active');
+				protrudingWindowContent.classList.remove('_active');
+			});
+		}
+		protrudingWindow.addEventListener("click", function (e) {
+			protrudingWindow.classList.toggle('_active');
+			protrudingWindowContent.classList.toggle('_active');
+		});
+		document.addEventListener( 'click', (e) => {
+			let withinBoundaries = e.composedPath().includes(protrudingWindow);
+			let withinBoundaries2 = e.composedPath().includes(protrudingWindowContent);
+
+			if ( ! withinBoundaries && ! withinBoundaries2) {
+				protrudingWindow.classList.remove('_active');
+				protrudingWindowContent.classList.remove('_active');
+			}
+		})
+	}
+}
+
+
+//==================================================================================================================================================
+//Всплывающие окна - "Начало"
+//==================================================================================================================================================
 
 
 
