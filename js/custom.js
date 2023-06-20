@@ -103,6 +103,61 @@ if (timers) {
 	}
 }
 
+
+/*============================*/
+
+
+const timersForwards = document.querySelectorAll('._timer-forward');
+
+if (timersForwards) {
+	function gettingSeconds(numberText) {
+		let numberOne = numberText.slice(0, 2);
+		let numberTwo = numberText.slice(3, 5);
+		let numberTwree = numberText.slice(6, 8);
+		let number = ((+numberOne * 60) + +numberTwo) * 60 + +numberTwree;
+		return number;
+	}
+
+	for (var i = 0; i < timersForwards.length; i++) {
+		let timer = timersForwards[i];
+		let timerShow = timer.querySelector("._timer-forward-content");
+		let timerText = timerShow.innerText.replace(/[^0-9,.]/g, ' ');
+		let timerNumber = +gettingSeconds(timerText);
+
+		timer = setInterval(function () {
+			let seconds = timeMinut%60;
+			let minutes = timeMinut/60%60;
+			let hour = timeMinut/60/60%60;
+			if (timeMinut <= 0) {
+				clearInterval(timer);
+				alert("Время закончилось");
+			} else {
+				hour = Math.trunc(hour);
+				minutes = Math.trunc(minutes);
+				seconds = Math.trunc(seconds);
+
+				hour = String(hour);
+				if (hour.length < 2) {
+					hour = '0' + hour;
+				}
+				minutes = String(minutes);
+				if (minutes.length < 2) {
+					minutes = '0' + minutes;
+				}
+				seconds = String(seconds);
+				if (seconds.length < 2) {
+					seconds = '0' + seconds;
+				}
+				let strTimer = `${hour}:${minutes}:${seconds}`;
+				timerShow.innerHTML = strTimer;
+			}
+			++timeMinut;
+		}, 1000)
+
+		let timeMinut = parseInt(timerNumber);
+	}
+}
+
 //==================================================================================================================================================
 //Таймер - "Конец"
 //==================================================================================================================================================
@@ -318,6 +373,9 @@ var options = {
 				}, 500);
 			},
 			mouseMove: function(event, chartContext, config) {
+				if (schedule.classList.contains('_schedule-standart')) {
+					schedule.classList.remove('_schedule-standart');
+				}
 				let apexchartsNumber;
 				let ApexchartsTooltip = document.querySelector(".apexcharts-tooltip");
 				if (ApexchartsTooltip) {
@@ -333,7 +391,7 @@ var options = {
 									if (+apexchartsNumber == +receivingInterestNumber) {
 										for (let i = 0; i < receivingInterestNumbers.length; i++) {
 											receivingInterestNumbers[i].classList.remove('_hover');
-											//document.querySelector(".schedule").classList.remove('_scheduleHover');
+											document.querySelector(".schedule").classList.remove('_scheduleHover');
 										}
 										receivingInterestNumbers[i].classList.add('_hover');
 										document.querySelector(".schedule").classList.add('_scheduleHover');
@@ -367,6 +425,7 @@ var options = {
 					let receivingInterestItems = document.querySelectorAll(".apexcharts-legend-text");
 
 					if (receivingInterestItems) {
+
 						for (var i = 0; i < receivingInterestItems.length; i++) {
 							let receivingInterestItem = receivingInterestItems[i];
 							receivingInterestItem.onmouseover = function(event) {
