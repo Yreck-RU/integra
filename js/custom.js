@@ -425,20 +425,20 @@ var options = {
 					let receivingInterestItems = document.querySelectorAll(".apexcharts-legend-text");
 
 					if (receivingInterestItems) {
-
 						for (var i = 0; i < receivingInterestItems.length; i++) {
 							let receivingInterestItem = receivingInterestItems[i];
 							receivingInterestItem.onmouseover = function(event) {
 								let schedule = document.querySelector(".schedule");
 								schedule.classList.add('_hover');
-								//receivingInterestItem.querySelector(".schedule-button__item").classList.add('_hover');
+								receivingInterestItem.querySelector(".schedule-button__item").classList.add('_hover');
 								let apexchartsHover = schedule.querySelector(".schedule-button__item._hover");
-								if (scheduleTitle && apexchartsHover) {
+								if (schedule && apexchartsHover) {
 									let apexchartsTitle = apexchartsHover.querySelector(".schedule-button-title__text").innerText.match(/[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Lm}\p{Mn}\p{Nd}\p{Pc}']+/u)[0];
 									scheduleTitle.innerText = "" + apexchartsTitle;
 								}
 							}
 							receivingInterestItem.onmouseout = function(event) {
+								receivingInterestItem.querySelector(".schedule-button__item").classList.remove('_hover');
 								let schedule = document.querySelector(".schedule");
 								schedule.classList.remove('_hover');
 							}
