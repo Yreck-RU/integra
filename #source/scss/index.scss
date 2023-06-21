@@ -587,6 +587,7 @@
 		z-index: 105;
 		background: rgb(250, 250, 250);
 		padding-top: 60px;
+		border: none !important;
 
 		&._active {
 			left: 0 !important;
@@ -829,6 +830,7 @@
 		z-index: 105;
 		background: rgb(250, 250, 250);
 		padding-top: 62px;
+		border: none !important;
 
 
 		&._active {
@@ -1184,6 +1186,7 @@
 		z-index: 105;
 		background: rgb(250, 250, 250);
 		padding-top: 61px;
+		border: none !important;
 
 		&._active {
 			left: 0 !important;
@@ -2080,10 +2083,6 @@
 		transition: all 0.3s ease 0s;
 		opacity: 0;
 	}
-	&._hover .schedule-title,
-	&._scheduleHover .schedule-title {
-		opacity: 1;
-	}
 
 
 
@@ -2179,6 +2178,10 @@
 			position: relative;
 			left: -110%;
 		}*/
+	}
+	&._hover .schedule-title,
+	&._scheduleHover .schedule-title {
+		opacity: 1 !important;
 	}
 }
 

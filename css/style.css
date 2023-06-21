@@ -804,7 +804,8 @@ body._lock {
       height: 100%;
       z-index: 105;
       background: #fafafa;
-      padding-top: 60px; }
+      padding-top: 60px;
+      border: none !important; }
       .dashboard-news-wrapper._active {
         left: 0 !important; } }
 
@@ -1029,7 +1030,8 @@ body._lock {
       height: 100%;
       z-index: 105;
       background: #fafafa;
-      padding-top: 62px; }
+      padding-top: 62px;
+      border: none !important; }
       .dashboard-langvig-wrapper._active {
         left: 0 !important; } }
 
@@ -1370,7 +1372,8 @@ body._lock {
       height: 100%;
       z-index: 105;
       background: #fafafa;
-      padding-top: 61px; }
+      padding-top: 61px;
+      border: none !important; }
       .dashboard-notifications-wrapper._active {
         left: 0 !important; } }
 
@@ -2241,9 +2244,6 @@ body._lock {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     opacity: 0; }
-  .schedule._hover .schedule-title,
-  .schedule._scheduleHover .schedule-title {
-    opacity: 1; }
   .schedule._schedule-standart .schedule-title {
     opacity: 1 !important; }
   .schedule._schedule-standart .apexcharts-series[seriesName="series-2"] path {
@@ -2326,6 +2326,9 @@ body._lock {
 			position: relative;
 			left: -110%;
 		}*/ } }
+  .schedule._hover .schedule-title,
+  .schedule._scheduleHover .schedule-title {
+    opacity: 1 !important; }
 
 .schedule._active .schedule-title {
   position: absolute;
