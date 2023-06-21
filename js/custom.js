@@ -411,7 +411,7 @@ var options = {
 								//console.log(apexchartsTitle);
 								scheduleTitle.innerText = "" + apexchartsTitle;
 							}
-						}, 10)
+						}, 100)
 					};
 					document.querySelector(".apexcharts-series").onmouseout = function(event) {
 						let timerinAniItemWrapper = setTimeout(function tick() {
@@ -419,7 +419,7 @@ var options = {
 							for (let i = 0; i < receivingInterestItems.length; i++) {
 								receivingInterestItems[i].classList.remove('_hover');
 							}
-						}, 10);
+						}, 100);
 					};
 
 					let receivingInterestItems = document.querySelectorAll(".apexcharts-legend-text");
@@ -431,7 +431,7 @@ var options = {
 							receivingInterestItem.onmouseover = function(event) {
 								let schedule = document.querySelector(".schedule");
 								schedule.classList.add('_hover');
-								receivingInterestItem.querySelector(".schedule-button__item").classList.add('_hover');
+								//receivingInterestItem.querySelector(".schedule-button__item").classList.add('_hover');
 								let apexchartsHover = schedule.querySelector(".schedule-button__item._hover");
 								if (scheduleTitle && apexchartsHover) {
 									let apexchartsTitle = apexchartsHover.querySelector(".schedule-button-title__text").innerText.match(/[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Lm}\p{Mn}\p{Nd}\p{Pc}']+/u)[0];
