@@ -3520,3 +3520,196 @@ body._lock {
   font-weight: 700;
   line-height: 18px;
   color: #05060f; }
+
+@media (max-width: 640px) {
+  .deposit {
+    display: none;
+    max-height: 0;
+    max-width: 0; } }
+
+.deposit__flex {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.deposit__blok {
+  background: white;
+  padding: 24px;
+  border-radius: 24px;
+  border-left: 0.50px #EFF2F5 solid;
+  border-top: 0.50px #EFF2F5 solid;
+  border-right: 0.50px #EFF2F5 solid;
+  border-bottom: 0.50px #EFF2F5 solid; }
+  .deposit__blok.deposit__blok_60 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 59%;
+    flex: 0 0 59%; }
+  .deposit__blok.deposit__blok_40 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 39%;
+    flex: 0 0 39%; }
+
+.deposit-form {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  overflow: hidden; }
+
+.deposit-form__line {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 72px;
+  flex: 0 0 72px;
+  position: relative; }
+  .deposit-form__line:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 23px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(23, 80, 177, 0.08); }
+
+.deposit-form__body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
+
+.deposit-form__item {
+  margin-bottom: 18px; }
+  .deposit-form__item:last-child {
+    margin-bottom: 0; }
+  .deposit-form__item:last-child .deposit-form-title__icon span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 20vh;
+    background: #fff; }
+  .deposit-form__item:first-child .deposit-form-title__icon {
+    top: -4px;
+    -webkit-transform: translate(-100%, 0%);
+    -ms-transform: translate(-100%, 0%);
+    transform: translate(-100%, 0%); }
+
+.deposit-form-title {
+  position: relative;
+  z-index: 2; }
+  .deposit-form-title.deposit-form-title_dim .deposit-form-title__content {
+    color: #a6b0c3; }
+
+.deposit-form-title__icon {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #edf1f9;
+  border: 4px solid #fff;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%); }
+  .deposit-form-title__icon span {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    color: #1750B1;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 24px;
+    z-index: 1; }
+
+.deposit-form-title__content {
+  color: #05060F;
+  font-size: 18px;
+  font-family: Lato;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 8px; }
+  .deposit-form-title__content.deposit-form-title__content_min {
+    font-size: 14px;
+    line-height: 24px; }
+
+.deposit-form-blok {
+  background: #f4f5f6;
+  height: 48px;
+  border-radius: 12px; }
+
+/*====================*/
+.deposit-faq {
+  position: relative; }
+  .deposit-faq > * {
+    position: relative;
+    z-index: 2; }
+
+.deposit-faq__bacgraund {
+  position: absolute;
+  right: -24px;
+  bottom: -24px;
+  z-index: 1; }
+
+.deposit-faq__title {
+  color: #05060F;
+  font-size: 18px;
+  font-family: Lato;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 12px; }
+
+.deposit-faq__item {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  .deposit-faq__item:last-child {
+    margin-bottom: 0; }
+
+.deposit-faq__icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px; }
+  .deposit-faq__icon img {
+    width: 100%; }
+
+.deposit-faq__text {
+  padding-left: 4px;
+  color: #58667E;
+  font-size: 14px;
+  font-family: Lato;
+  font-weight: 600;
+  text-decoration: underline;
+  line-height: 24px; }
+
+/*====================*/
