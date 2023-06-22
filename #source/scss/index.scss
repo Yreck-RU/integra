@@ -3368,11 +3368,221 @@
 
 
 // =================================================================
-// Начало - ""
+// Начало - "deposit"
 // =================================================================
 
+.deposit {
+	@media (max-width: 640px) {
+		display: none;
+		max-height: 0;
+		max-width: 0;
+	}
+}
+.deposit__flex {
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.deposit__blok {
+	background: rgba(255, 255, 255, 1);
+	padding: 24px;
+	border-radius: 24px;
+	border-left: 0.50px #EFF2F5 solid; 
+	border-top: 0.50px #EFF2F5 solid; 
+	border-right: 0.50px #EFF2F5 solid; 
+	border-bottom: 0.50px #EFF2F5 solid;
+
+
+	&.deposit__blok_60 {
+		flex: 0 0 59%;
+	}
+	&.deposit__blok_40 {
+		flex: 0 0 39%;
+	}
+}
+
+.deposit-form {
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.deposit-form__line {
+	flex: 0 0 72px;
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 23px;
+		top: 0;
+		width: 2px;
+		height: 100%;
+		background: rgba(23, 80, 177, 0.08);
+	}
+}
+.deposit-form__body {
+	flex: 1 1 auto;
+}
+.deposit-form__item {
+	margin-bottom: 18px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&:last-child .deposit-form-title__icon span:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		height: 20vh;
+		background: #fff;
+	}
+
+
+
+	&:first-child .deposit-form-title__icon{
+		top: -4px;
+		transform: translate(-100%, 0%);
+	}
+}
+.deposit-form-title {
+	position: relative;
+	z-index: 2;
+
+	&.deposit-form-title_dim .deposit-form-title__content{
+		color: rgba(166, 176, 195, 1);
+	}
+}
+.deposit-form-title__icon {
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background: #edf1f9;
+	border: 4px solid #fff;
+
+	top: 50%;
+	left: -20px;
+	transform: translate(-100%, -50%);
+
+	& span {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		color: #1750B1;
+		font-size: 16px;
+		font-family: Lato;
+		font-weight: 700;
+		line-height: 24px;
+		z-index: 1;
+	}
+}
+.deposit-form-title__content {
+	color: #05060F;
+	font-size: 18px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 32px;
+	margin-bottom: 8px;
+
+	&.deposit-form-title__content_min {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+
+
+
+
+.deposit-form-blok {
+	background: rgba(244, 245, 246, 1);
+	height: 48px;
+	border-radius: 12px;
+}
+
+
+
+
+
+
+/*====================*/
+
+.deposit-faq {
+	position: relative;
+
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
+}
+.deposit-faq__bacgraund {
+	position: absolute;
+	right: -24px;
+	bottom: -24px;
+	z-index: 1;
+}
+.deposit-faq__title {
+	color: #05060F;
+	font-size: 18px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 32px;
+	margin-bottom: 12px;
+
+}
+.deposit-faq__list {}
+.deposit-faq__item {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.deposit-faq__icon {
+	flex: 0 0 24px;
+
+	& img {
+		width: 100%;
+	}
+}
+.deposit-faq__text {
+	padding-left: 4px;
+	// How to deposit crypto?
+	color: #58667E;
+	font-size: 14px;
+	font-family: Lato;
+	font-weight: 600;
+	text-decoration: underline;
+	line-height: 24px;
+
+}
+
+/*====================*/
+
+
+
+
+
+
+
+
+
 // =================================================================
-// Конец - ""
+// Конец - "deposit"
 // =================================================================
 
 
