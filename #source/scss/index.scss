@@ -3394,6 +3394,9 @@
 	border-bottom: 0.50px #EFF2F5 solid;
 
 
+	margin-bottom: 2%;
+
+
 	&.deposit__blok_60 {
 		flex: 0 0 59%;
 	}
@@ -3576,7 +3579,245 @@
 
 
 
+/*====================*/
 
+
+
+
+.deposit-list {}
+.deposit-list-title {
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 2px;
+}
+.deposit-list-title__text {
+	display: flex;
+	align-items: center;
+
+	& span {
+		color: #05060F;
+		font-size: 18px;
+		font-family: Lato;
+		font-weight: 700;
+		line-height: 32px;
+	}
+	& a {
+		margin-left: 9px;
+	}
+}
+.deposit-list-title__link {
+	& img {
+		margin-right: 6px;
+	}
+	& span {
+		color: #58667E;
+		font-size: 14px;
+		font-family: Lato;
+		font-weight: 600;
+		text-decoration: underline;
+		line-height: 24px;
+	}
+}
+
+
+
+
+
+.deposit-list__wrapper {}
+.deposit-list-item {
+	padding: 9px 0;
+	border-bottom: 0.5px solid #EFF2F5;
+	position: relative;
+
+	&:last-child {
+		border: none;
+	}
+}
+
+.deposit-list-item__link {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.deposit-list-item__title {
+	font-size: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 3px;
+}
+.deposit-list-item__icon {
+	flex: 0 0 24px;
+	height: 24px;
+	border-radius: 50%;
+	margin-right: 6px;
+}
+.ibg {}
+.deposit-list-item__content {
+	color: #05060F;
+	font-size: 16px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 24px;
+}
+.deposit-list-item__status {
+	margin-left: 12px;
+	color: #666;
+	font-size: 12px;
+	font-family: Lato;
+	font-weight: 500;
+	line-height: 24px;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		background: #666;
+		border-radius: 50%;
+		margin-right: 2px;
+	}
+
+	&.deposit-list-item__status_yellow {
+		color: rgba(235, 179, 36, 1);
+	}
+	&.deposit-list-item__status_yellow:before {
+		background: rgba(235, 179, 36, 1);
+	}
+	&.deposit-list-item__status_gren {
+		color: #16C784;
+	}
+	&.deposit-list-item__status_gren:before {
+		background: #16C784;
+	}
+}
+
+
+
+
+
+.deposit-list-item__wrapper {
+	font-size: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.deposit-list-item__data {
+	color: #05060F;
+	font-size: 14px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 24px;
+	margin-right: 12px;
+
+	& span {
+		color: #58667E;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 16px;
+	}
+}
+.deposit-list-item__network {
+	color: #05060F;
+	font-size: 14px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 24px;
+	margin-right: 12px;
+
+	& span {
+		color: #58667E;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 16px;
+	}
+}
+
+
+
+.deposit-list-adres {
+	font-size: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 12px;
+	@media (max-width: 767px) {
+		max-width: 0;
+		display: none;
+	}
+}
+.deposit-list-adres__title {
+	color: #58667E;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	margin-right: 2px;
+}
+.deposit-list-adres__content {
+	color: #05060F;
+	font-size: 14px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 24px;
+	overflow: hidden;
+	flex: 1 1 auto;
+	max-width: 293px;
+
+	@media (max-width: 1420px) {
+		max-width: 13vw;
+	}
+}
+.deposit-list-adres__button {
+	margin-left: 4px;
+}
+
+
+
+
+.deposit-list-txid {
+	font-size: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	@media (max-width: 1420px) {
+		max-width: 19vw;
+	}
+	@media (max-width: 767px) {
+		max-width: 0;
+		display: none;
+	}
+}
+.deposit-list-txid__title {
+	color: #58667E;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	margin-right: 2px;
+}
+.deposit-list-txid__content {
+	color: #05060F;
+	font-size: 14px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 24px;
+	overflow: hidden;
+	max-width: 110px;
+
+	@media (max-width: 1420px) {
+		max-width: 8vw;
+	}
+}
+.deposit-list-txid__button {
+	margin-left: 4px;
+}
+
+/*====================*/
 
 
 
