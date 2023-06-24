@@ -913,6 +913,66 @@ if (protrudingWindows.length > 0) {
 
 
 
+//==================================================================================================================================================
+//Линивая загрусска - "Начало"
+//==================================================================================================================================================
+
+
+
+const selectSingles = document.querySelectorAll('.select');
+
+if (selectSingles) {
+	for (let i = 0; i < selectSingles.length; i++) {
+		const selectSingle = selectSingles[i];
+		const selectSingle_title = selectSingle.querySelector('.select-title');
+		const selectSingle_labels = selectSingle.querySelectorAll('.select-content__label');
+
+		// Toggle menu
+		selectSingle_title.addEventListener('click', () => {
+			if ('active' === selectSingle.getAttribute('data-state')) {
+				//selectSingle.setAttribute('data-state', '');
+			} else {
+				selectSingle.setAttribute('data-state', 'active');
+				if (selectSingle_title.classList.contains('__select__title-countries')) {
+
+				}
+			}
+		});
+
+		document.addEventListener( 'click', (e) => {
+			let withinBoundaries = e.composedPath().includes(selectSingle_title);
+			let withinBoundaries2 = e.composedPath().includes(selectSingle_labels);
+			if ( ! withinBoundaries && ! withinBoundaries2) {
+				selectSingle.setAttribute('data-state', '');
+			}
+			
+		})
+
+		// Close when click to option
+		for (let i = 0; i < selectSingle_labels.length; i++) {
+			let selectSingle_label = selectSingle_labels[i];
+			selectSingle_labels[i].addEventListener('click', (evt) => {
+				if (selectSingle_title.querySelector('input')) {
+					selectSingle_title.querySelector('input').value = evt.target.textContent;
+					//console.log(evt.target.textContent);
+				}
+				selectSingle.setAttribute('data-state', '');
+			});
+		}
+	}
+}
+
+
+//==================================================================================================================================================
+//Линивая загрусска - "Начало"
+//==================================================================================================================================================
+
+
+
+
+
+
+
 
 //==================================================================================================================================================
 //Линивая загрусска - "Начало"
