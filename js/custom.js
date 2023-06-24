@@ -955,9 +955,7 @@ if (selectSingles) {
 				if (selectSingle_title.querySelector('input')) {
 					selectSingle_title.querySelector('input').value = evt.target.textContent;
 				} else {
-					//selectSingle_title.innerHTML = '';
 					selectSingle_title.innerHTML = evt.target.innerHTML;
-					console.log(evt.target.innerHTML);
 				}
 				selectSingle.setAttribute('data-state', '');
 			});
