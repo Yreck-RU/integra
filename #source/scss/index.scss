@@ -5210,6 +5210,12 @@
 	font-weight: 700;
 	line-height: 32px;
 	text-align: center;
+
+	&.confirm-header__title_min {
+		text-align: left;
+		font-size: 18px;
+		line-height: 32px;
+	}
 }
 .confirm-body {
 	background: rgba(244, 245, 246, 1);
@@ -5289,6 +5295,7 @@
 	background: rgba(23, 80, 177, 1);
 	color: #fff;
 	height: 48px;
+	width: 100%;
 	border-radius: 12px;
 
 	font-size: 16px;
@@ -5307,10 +5314,367 @@
 	}
 }
 
+
+
+
+.confirm__text {
+	color: #58667E;
+	font-size: 12px;
+	font-family: Lato;
+	font-weight: 400;
+	line-height: 24px;
+	margin-bottom: 12px;
+}
+
+
+.confirm-input {
+	margin-top: 12px;
+
+	& .select-title__button {
+		width: auto;
+		white-space: nowrap;
+		background: none;
+	}
+	& .deposit-form-title__content {
+		color: #455062;
+		font-size: 14px;
+		font-family: Lato;
+		font-weight: 700;
+		line-height: 24px;
+	}
+}
+
+
+
 // =================================================================
 // Конец - "confirm"
 // =================================================================
 
+
+
+
+
+
+
+
+// =================================================================
+// Начало - ""
+// =================================================================
+
+
+
+.swap-form {
+	@media (max-width: 420px) {
+		margin-right: -14px;
+		margin-left: -14px;
+	}
+}
+.swap {
+
+}
+.swap-item {
+	border-radius: 16px;
+	background: rgba(244, 245, 246, 1);
+	padding: 17px 12px;
+	margin-bottom: 12px;
+	position: relative;
+
+	& > *:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+.swap-item__icon {
+	position: absolute;
+	left: 50%;
+	bottom: -6px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(244, 245, 246, 1);
+	border: 3px solid rgba(255, 255, 255, 1);
+	z-index: 9;
+
+	font-size: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transform: translate(-50%, 50%);
+}
+.swap-item__header {
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+}
+.swap-radio {
+	position: relative;
+}
+.swap-radio-title {
+	background: rgba(255, 255, 255, 1);
+	padding: 4px 8px;
+
+	display: flex;
+	align-items: center;
+	border-radius: 12px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+
+	&._active {
+		border: 1px solid rgba(23, 80, 177, 0.24);
+	}
+	&._active .swap-radio-title__icon {
+		transform: rotate(180deg);
+	}
+
+	& > *{
+		font-size: 14px;
+		font-family: Lato;
+		font-weight: 600;
+		line-height: 24px;
+	}
+}
+.swap-radio-title__grey {
+	color: rgba(166, 176, 195, 1);
+	margin-right: 3px;
+}
+.swap-radio-title__blak {}
+.swap-radio-title__icon {
+	margin-left: 4px;
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+}
+.swap-item-text {
+
+	& > * {
+		font-size: 14px;
+		font-family: Lato;
+		font-weight: 700;
+		line-height: 24px;
+	}
+}
+.swap-item-text__grey {
+	color: #A6B0C3;
+}
+.swap-item-text__black {
+	color: rgba(5, 6, 15, 1);
+}
+
+
+
+.swap-item-body {
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 6px;
+}
+.swap-item-body__number {
+	color: #A6B0C3;
+	font-size: 24px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 32px;
+
+	&.active {
+		color: rgba(5, 6, 15, 1);
+	}
+}
+.swap-item-body__content {
+	display: flex;
+	align-items: center;
+}
+.swap-item-body__img {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+
+}
+.swap-item-body__title {
+	color: #05060F;
+	font-size: 18px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 24px;
+	margin-left: 8px;
+}
+
+
+
+
+
+/*==============================*/
+
+
+.swap-radio-wrapper {
+	position: absolute;
+	top: calc(100% + 15px);
+	background: rgba(255, 255, 255, 1);
+	border-radius: 12px;
+	border: 1px solid rgba(23, 80, 177, 0.24);
+	z-index: 10;
+	width: 308px;
+	padding: 8px 6px;
+	pointer-events: none;
+	transition: all 0.3s ease 0s;
+	opacity: 0;
+
+	&._active {
+		top: calc(100% + 5px);
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	@media (max-width: 350px) {
+		width: 280px;
+	}
+}
+.swap-radio-wrapper__item {
+	& input {
+		display: none;
+	}
+	& label {
+		padding: 8px 14px;
+		padding-right: 34px;
+		position: relative;
+		display: block;
+		border-radius: 12px;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+	}
+	& input:checked + label {
+		background: rgba(244, 245, 246, 1);
+	}
+	& input:checked + label .swap-radio-wrapper__img {
+		opacity: 1;
+	}
+}
+.swap-radio-wrapper__text {
+	color: #05060F;
+	font-size: 14px;
+	font-family: Lato;
+	font-weight: 600;
+	line-height: 24px;
+	display: block;
+
+	& span {
+		display: inline-block;
+		margin-right: 5px;
+	}
+}
+.swap-radio-wrapper__img {
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease 0s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+
+
+/*=======================*/
+
+
+.swap-errore {
+	border-radius: 12px;
+	background: rgba(235, 179, 36, 0.12);
+	padding: 14px;
+	margin-bottom: 8px;
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.swap-errore__icon {
+	flex: 0 0 16px;
+
+	& img {
+		width: 100%;
+	}
+}
+.swap-errore__content {
+	flex: 1 1 auto;
+	padding-left: 8px;
+}
+.swap-errore__title {
+	color: #CD9505;
+	font-size: 12px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 16px;
+	margin-bottom: 8px;
+}
+.swap-errore__text {
+	color: #CD9505;
+	font-size: 12px;
+	font-family: Lato;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+// =================================================================
+// Конец - ""
+// =================================================================
+
+
+
+
+
+
+
+
+// =================================================================
+// Начало - ""
+// =================================================================
+
+.list-pages {
+	margin: 30px 0;
+}
+.list-page__title {
+	color: #05060F;
+	font-size: 18px;
+	font-family: Lato;
+	font-weight: 700;
+	line-height: 32px;
+}
+.list-page__list {
+	@include adaptiv-value("padding-left", 24, 10, 1);
+	overflow: hidden;
+}
+.list-page__item {
+	// Send Code
+	color: #1750B1;
+	@include adaptiv-value("font-size", 14, 10, 1);
+	font-family: Lato;
+	font-weight: 700;
+	@include adaptiv-value("line-height", 24, 18, 1);
+	text-decoration: underline;
+	display: block;
+	margin: 8px 0;
+}
+
+// =================================================================
+// Конец - ""
+// =================================================================
+
+
+
+
+
+
+
+
+// =================================================================
+// Начало - ""
+// =================================================================
+
+// =================================================================
+// Конец - ""
+// =================================================================
 
 
 
