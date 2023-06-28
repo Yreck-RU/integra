@@ -901,7 +901,7 @@ if (protrudingWindows.length > 0) {
 }
 
 
-const protrudingExits = protrudingWindowContent.querySelector('._protruding-exit');
+const protrudingExits = document.querySelector('._protruding-exit');
 if (protrudingExits) {
 	for (var i = 0; i < protrudingExits.length; i++) {
 		let protrudingExit = protrudingExits[i];

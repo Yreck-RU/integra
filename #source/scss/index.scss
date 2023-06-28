@@ -5506,12 +5506,17 @@
 	& .deposit-screenshot-list__item {
 		padding-left: 24px;
 		margin-bottom: 9px;
+		color: #455062;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
 	}
 	& .deposit-screenshot-list__item:before {
 		width: 6px;
 		height: 6px;
 		top: 9px;
 		left: 8px;
+		background: #455062;
 	}
 }
 .confirm__img {
@@ -5610,6 +5615,11 @@
 	font-weight: 600;
 	line-height: 24px;
 	overflow-wrap: anywhere;
+
+	@media (max-width: 767px) {
+		text-align: left;
+		flex: 0 0 100%;
+	}
 }
 .confirm-body-item__button {
 	margin-left: 6px;
@@ -5686,10 +5696,32 @@
 	& .select-title__button {
 		font-size: 14px;
 		right: 4px;
-		transform: translateY(-2px);
+		font-weight: 700;
+		transform: translateY(0px);
 	}
 }
 
+
+/*====================*/
+
+.confirm-swap-form_img {
+	& .confirm-header {
+		margin-bottom: 0px !important;
+	}
+	& .confirm-body_img {
+		margin-top: 28px;
+	}
+	& .confirm-header__title {
+		margin-bottom: 6px;
+	}
+	& .confirm-body_img {
+		margin-bottom: 24px;
+	}
+	& .confirm__button {
+		height: 48px;
+		margin-bottom: 16px;
+	}
+}
 
 
 // =================================================================

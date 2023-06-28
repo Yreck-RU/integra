@@ -5474,12 +5474,17 @@ body._lock {
     padding: 6px 0; }
   .confirm .deposit-screenshot-list__item {
     padding-left: 24px;
-    margin-bottom: 9px; }
+    margin-bottom: 9px;
+    color: #455062;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; }
   .confirm .deposit-screenshot-list__item:before {
     width: 6px;
     height: 6px;
     top: 9px;
-    left: 8px; }
+    left: 8px;
+    background: #455062; }
 
 .confirm__img {
   position: relative;
@@ -5581,6 +5586,12 @@ body._lock {
   font-weight: 600;
   line-height: 24px;
   overflow-wrap: anywhere; }
+  @media (max-width: 767px) {
+    .confirm-body-item__content {
+      text-align: left;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%; } }
 
 .confirm-body-item__button {
   margin-left: 6px;
@@ -5655,9 +5666,27 @@ body._lock {
   .confirm-input .select-title__button {
     font-size: 14px;
     right: 4px;
-    -webkit-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
-    transform: translateY(-2px); }
+    font-weight: 700;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px); }
+
+/*====================*/
+.confirm-swap-form_img .confirm-header {
+  margin-bottom: 0px !important; }
+
+.confirm-swap-form_img .confirm-body_img {
+  margin-top: 28px; }
+
+.confirm-swap-form_img .confirm-header__title {
+  margin-bottom: 6px; }
+
+.confirm-swap-form_img .confirm-body_img {
+  margin-bottom: 24px; }
+
+.confirm-swap-form_img .confirm__button {
+  height: 48px;
+  margin-bottom: 16px; }
 
 @media (max-width: 420px) {
   .swap-form {
