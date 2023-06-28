@@ -883,6 +883,7 @@ if (protrudingWindows.length > 0) {
 				protrudingWindowContent.classList.remove('_active');
 			});
 		}
+		
 		protrudingWindow.addEventListener("click", function (e) {
 			protrudingWindow.classList.toggle('_active');
 			protrudingWindowContent.classList.toggle('_active');
@@ -899,6 +900,24 @@ if (protrudingWindows.length > 0) {
 	}
 }
 
+
+const protrudingExits = protrudingWindowContent.querySelector('._protruding-exit');
+if (protrudingExits) {
+	for (var i = 0; i < protrudingExits.length; i++) {
+		let protrudingExit = protrudingExits[i];
+		protrudingExit.addEventListener("click", function (e) {
+			let protrudingWindows = document.querySelectorAll('[data-protruding]').parentNode;
+			for (let i = 0; i < protrudingWindows.length; i++) {
+				let protrudingWindow = protrudingWindows[i];
+				let actives = protrudingWindow.querySelectorAll('._active');
+				for (let i = 0; i < actives.length; i++) {
+					let active = actives[i];
+					active.classList.remove('_active');
+				}
+			}
+		});
+	}
+}
 
 //==================================================================================================================================================
 //Всплывающие окна - "Начало"
