@@ -2079,6 +2079,10 @@
 	margin-bottom: 17px;
 	margin-left: 3px;
 
+	&.dashboard-body__title_confirm {
+		padding-top: 5px;
+	}
+
 	& a {
 		margin-right: 5px;
 	}
@@ -3824,6 +3828,10 @@
 	//overflow: hidden;
 	margin-bottom: 18px;
 
+	&.deposit-form_margin-40 {
+		margin-bottom: 12px !important;
+	}
+
 	&:last-child {
 		margin-bottom: 0 !important;
 	}
@@ -4745,7 +4753,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 14px;
+	margin-bottom: 26px;
 
 	@media (max-width: 767px) {
 		display: block;
@@ -4761,7 +4769,7 @@
 	font-family: Lato;
 	font-weight: 700;
 	line-height: 32px;
-	margin-bottom: 2px;
+	margin-bottom: 5px;
 }
 .receive__text {
 	color: #A6B0C3;
@@ -4774,7 +4782,7 @@
 	align-items: center;
 
 	& img {
-		margin-right: 3px;
+		margin-right: 8px;
 	}
 }
 
@@ -5519,6 +5527,29 @@
 		background: #455062;
 	}
 }
+
+.confirm_button-top {
+	& .confirm__button {
+		margin-top: 24px;
+	}
+}
+.confirm-swap-img {
+	margin-top: 24px !important;
+
+	& .confirm__img {
+		margin-bottom: 12px;
+	}
+	& .confirm-header {
+		margin-bottom: 25px;
+	}
+	& .confirm__button {
+		margin-top: 23px;
+	}
+	& .confirm__button:last-child {
+		margin-top: 18px;
+	}
+}
+
 .confirm__img {
 	position: relative;
 	left: 50%;
@@ -5561,7 +5592,7 @@
 	background: rgba(244, 245, 246, 1);
 	border-radius: 16px;
 	padding: 16px 16px;
-	margin-bottom: 12px;
+	margin-bottom: 13px;
 
 	&.confirm-body_img {
 		margin-top: 33px;
@@ -5581,6 +5612,10 @@
 
 	@media (max-width: 767px) {
 		display: block;
+
+		&.confirm-body-item_adaptive .confirm-body-item__content {
+			flex: 1 1 auto;
+		}
 	}
 }
 .confirm-body-item__title {
@@ -5723,6 +5758,50 @@
 	}
 }
 
+/*=========================*/
+
+.deposit-active {
+	& .deposit-form__text {
+		padding-top: 0px;
+		padding-left: 2px;
+	}
+	& .deposit-form__item {
+		margin-bottom: 21px;
+	}
+	/*=================*/
+	& .deposit-form_amont .deposit-form__text p {
+		font-weight: 600;
+		line-height: 24px;
+	}
+
+	& .deposit-form_amont .deposit-form-title{
+		line-height: 24px;
+	}
+	& .deposit-form_amont {
+		transform: translateY(-2px);
+		margin-bottom: 0px;
+	}
+	& .amount-list {
+		margin-top: 10px;
+		margin-bottom: 11px;
+	}
+	& .amount-list__text {
+		margin-bottom: 7px;
+	}
+	/*=================*/
+
+	& .deposit__blok_60 {
+		padding-bottom: 24px;
+	}
+	& .deposit-screenshot-footer__text {
+		padding-left: 41px;
+		line-height: 22px;
+	}
+	& .deposit-screenshot-footer__text span {
+		top: 1px;
+		left: 17px;
+	}
+}
 
 // =================================================================
 // Конец - "confirm"
@@ -5761,7 +5840,7 @@
 	border-radius: 16px;
 	background: rgba(244, 245, 246, 1);
 	padding: 17px 15.5px;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 	position: relative;
 
 	& > *:last-child {
@@ -5795,7 +5874,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 12px;
+	margin-bottom: 13px;
 }
 .swap-radio {
 	position: relative;
@@ -5919,12 +5998,25 @@
 	pointer-events: none;
 	transition: all 0.3s ease 0s;
 	opacity: 0;
+	overflow: auto;
 
 	&._active {
 		top: calc(100% + 5px);
 		opacity: 1;
 		pointer-events: auto;
 		transform: translate(0%);
+	}
+
+	& > span:first-child {
+		display: inline-block;
+		background: rgba(166, 176, 195, 1);
+		width: 64px;
+		height: 4px;
+		border-radius: 4px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-bottom: 6px;
 	}
 
 
@@ -6006,11 +6098,12 @@
 	border-radius: 12px;
 	background: rgba(235, 179, 36, 0.12);
 	padding: 13px;
-	margin-bottom: 8px;
 	font-size: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	margin-top: 10px;
+	margin-bottom: 24px;
 }
 .swap-errore__icon {
 	flex: 0 0 16px;
