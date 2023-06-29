@@ -4960,7 +4960,7 @@
 		padding-left: 12px;
 		padding-top: 134px;
 	}
-	@media (max-width: 420px) {
+	@media (max-width: 540px) {
 		padding-top: 190px;
 
 		& .deposit-screenshot-timer > *{
@@ -5502,6 +5502,9 @@
 	&.confirm_margin-top {
 		margin-top: 30px;
 	}
+	&.confirm_margin-top-min {
+		margin-top: 22px;
+	}
 	& > *:last-child {
 		margin-bottom: 0 !important;
 		margin-top: 8px;
@@ -5903,7 +5906,7 @@
 		font-weight: 600;
 		line-height: 24px;
 	}
-	@media (max-width: 420px) {
+	@media (max-width: 1064px) {
 		&._active ~ .swap-radio-wrapper__exit {
 			opacity: 1;
 			pointer-events: auto;
@@ -6008,19 +6011,22 @@
 	}
 
 	& > span:first-child {
-		display: inline-block;
-		background: rgba(166, 176, 195, 1);
-		width: 64px;
-		height: 4px;
-		border-radius: 4px;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
-		margin-bottom: 6px;
+		display: none;
 	}
 
 
-	@media (max-width: 420px) {
+	@media (max-width: 1064px) {
+		& > span:first-child {
+			display: inline-block;
+			background: rgba(166, 176, 195, 1);
+			width: 64px;
+			height: 4px;
+			border-radius: 4px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-bottom: 6px;
+		}
 		position: fixed;
 		left: 0;
 		top: auto !important;
@@ -6193,6 +6199,10 @@
 // =================================================================
 
 
+.deposit-active .deposit-form_amont .deposit-form__text p {
+	font-weight: 600 !important;
+	line-height: 21px !important;
+}
 
 
 

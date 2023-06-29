@@ -4964,7 +4964,7 @@ body._lock {
     .deposit-screenshot-wrapper__content {
       padding-left: 12px;
       padding-top: 134px; } }
-  @media (max-width: 420px) {
+  @media (max-width: 540px) {
     .deposit-screenshot-wrapper__content {
       padding-top: 190px; }
       .deposit-screenshot-wrapper__content .deposit-screenshot-timer > * {
@@ -5470,6 +5470,8 @@ body._lock {
       padding: calc(10px + 14 * ((100vw - 320px) / 1360)); } }
   .confirm.confirm_margin-top {
     margin-top: 30px; }
+  .confirm.confirm_margin-top-min {
+    margin-top: 22px; }
   .confirm > *:last-child {
     margin-bottom: 0 !important;
     margin-top: 8px; }
@@ -5831,7 +5833,7 @@ body._lock {
     font-family: Lato;
     font-weight: 600;
     line-height: 24px; }
-  @media (max-width: 420px) {
+  @media (max-width: 1064px) {
     .swap-radio-title._active ~ .swap-radio-wrapper__exit {
       opacity: 1;
       pointer-events: auto; } }
@@ -5928,18 +5930,8 @@ body._lock {
     -ms-transform: translate(0%);
     transform: translate(0%); }
   .swap-radio-wrapper > span:first-child {
-    display: inline-block;
-    background: #a6b0c3;
-    width: 64px;
-    height: 4px;
-    border-radius: 4px;
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    margin-bottom: 6px; }
-  @media (max-width: 420px) {
+    display: none; }
+  @media (max-width: 1064px) {
     .swap-radio-wrapper {
       position: fixed;
       left: 0;
@@ -5950,7 +5942,19 @@ body._lock {
       border-radius: 12px 12px 0 0;
       -webkit-transform: translateY(200%) scale(0);
       -ms-transform: translateY(200%) scale(0);
-      transform: translateY(200%) scale(0); } }
+      transform: translateY(200%) scale(0); }
+      .swap-radio-wrapper > span:first-child {
+        display: inline-block;
+        background: #a6b0c3;
+        width: 64px;
+        height: 4px;
+        border-radius: 4px;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        margin-bottom: 6px; } }
 
 .swap-radio-wrapper__exit {
   position: fixed;
@@ -6088,3 +6092,7 @@ body._lock {
   @media (max-width: 1680px) {
     .list-page__item {
       line-height: calc(18px + 6 * ((100vw - 320px) / 1360)); } }
+
+.deposit-active .deposit-form_amont .deposit-form__text p {
+  font-weight: 600 !important;
+  line-height: 21px !important; }
