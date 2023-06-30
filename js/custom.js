@@ -555,7 +555,7 @@ chart.render();
 
 
 
-/*const receivingInterestItems = document.querySelectorAll(".apexcharts-legend-text");
+const receivingInterestItems = document.querySelectorAll(".apexcharts-legend-text");
 if (receivingInterestItems) {
 	for (var i = 0; i < receivingInterestItems.length; i++) {
 		let receivingInterestItem = receivingInterestItems[i];
@@ -585,7 +585,7 @@ if (receivingInterestItems) {
 			}
 		}
 	}
-}*/
+}
 
 
 
