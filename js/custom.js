@@ -380,12 +380,42 @@ var options = {
 				if (schedule.classList.contains('_schedule-standart')) {
 					schedule.classList.remove('_schedule-standart');
 				}
+				let receivingInterestItems = document.querySelectorAll(".apexcharts-legend-text");
+				if (receivingInterestItems) {
+					for (var i = 0; i < receivingInterestItems.length; i++) {
+						let receivingInterestItem = receivingInterestItems[i];
+						receivingInterestItem.onmouseover = function(event) {
+							for (let i = 0; i < receivingInterestItems.length; i++) {
+								receivingInterestItems[i].querySelector(".schedule-button__item").classList.remove('_hover');
+							}
+							let schedule = document.querySelector(".schedule");
+							schedule.classList.add('_hover');
+							//console.log('k');
+							receivingInterestItem.querySelector(".schedule-button__item").classList.add('_hover');
+							let apexchartsHover = schedule.querySelector(".schedule-button__item._hover");
+							//schedule.classList.add('_schedule-two');
+							//console.log(schedule);
+							if (apexchartsHover.closest('div[seriesname="series-1"]')) {
+								console.log("1");
+								schedule.classList.remove('_schedule-two');
+								schedule.classList.add('_schedule-one');
+							} else if (apexchartsHover.closest('div[seriesname="series-2"]')) {
+								console.log("2");
+								schedule.classList.remove('_schedule-one');
+								schedule.classList.add('_schedule-two');
+							}
+							if (schedule && apexchartsHover) {
+								let apexchartsTitle = apexchartsHover.querySelector(".schedule-button-title__text").innerText.match(/[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Lm}\p{Mn}\p{Nd}\p{Pc}']+/u)[0];
+								scheduleTitle.innerText = "" + apexchartsTitle;
+							}
+						}
+					}
+				}
 				if (ApexchartsTooltip) {
 					/*document.querySelector(".apexcharts-series").onmouseover = function(event) {
 						let timerTwo = setInterval(function () {
 							if (ApexchartsTooltip.classList.contains('apexcharts-active')) {
 								apexchartsNumber = ApexchartsTooltip.querySelector(".apexcharts-tooltip-text-y-value").innerText;
-								//console.log(apexchartsNumber);
 								let receivingInterestWapper = document.querySelector(".schedule");
 								let receivingInterestNumbers = receivingInterestWapper.querySelectorAll("._receiving-interests");
 								for (let i = 0; i < receivingInterestNumbers.length; i++) {
@@ -399,7 +429,6 @@ var options = {
 										document.querySelector(".schedule").classList.add('_scheduleHover');
 									}
 								}
-								//let receivingInterestWapper = document.querySelector(".schedule");
 							} else {
 								let receivingInterestNumbers = document.querySelectorAll("._receiving-interests");
 								for (let i = 0; i < receivingInterestNumbers.length; i++) {
@@ -410,7 +439,6 @@ var options = {
 							let apexchartsHover = schedule.querySelector(".schedule-button__item._hover");
 							if (scheduleTitle && apexchartsHover) {
 								let apexchartsTitle = apexchartsHover.querySelector(".schedule-button-title__text").innerText.match(/[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Lm}\p{Mn}\p{Nd}\p{Pc}']+/u)[0];
-								//console.log(apexchartsTitle);
 								scheduleTitle.innerText = "" + apexchartsTitle;
 							}
 						}, 100)
@@ -507,11 +535,6 @@ if (receivingInterestItems) {
 				let apexchartsTitle = apexchartsHover.querySelector(".schedule-button-title__text").innerText.match(/[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Lm}\p{Mn}\p{Nd}\p{Pc}']+/u)[0];
 				scheduleTitle.innerText = "" + apexchartsTitle;
 			}
-		}
-		receivingInterestItem.onmouseout = function(event) {
-			/*receivingInterestItem.querySelector(".schedule-button__item").classList.remove('_hover');
-			let schedule = document.querySelector(".schedule");
-			schedule.classList.remove('_hover');*/
 		}
 	}
 }
