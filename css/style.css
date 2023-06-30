@@ -2431,7 +2431,29 @@ body._lock {
   transition: all 0.3s ease 0s;
   max-width: 100%;
   max-height: 118px;
-  height: 120px; }
+  height: 120px;
+  /*& .apexcharts-series path[filter] {
+		stroke-width: 0;
+	}*/
+  /*&._hover .apexcharts-series path{
+		stroke-width: 0;
+	}*/
+  /*& .apexcharts-series.legend-mouseover-inactive + .apexcharts-series path{
+		stroke-width: 0;
+	}*/
+  /*& .apexcharts-legend-text:hover .schedule-button__item {
+		background: rgba(239, 242, 245, 1);
+	}
+	& .schedule-title{
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+	}*/
+  /*&._schedule-one .schedule-title{
+		opacity: 1 !important;
+	}*/
+  /*&._schedule-two .schedule-title{
+		opacity: 1 !important;
+	}*/ }
   .schedule .apexcharts-series path {
     stroke: #eff2f5;
     stroke-width: 6;
@@ -2439,17 +2461,11 @@ body._lock {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
-  .schedule .apexcharts-series path[filter] {
-    stroke-width: 0; }
-  .schedule._hover .apexcharts-series path {
-    stroke-width: 0; }
   .schedule .apexcharts-series.legend-mouseover-inactive {
     stroke-width: 6 !important;
     opacity: 1; }
   .schedule .apexcharts-series.legend-mouseover-inactive path {
     stroke-width: 6 !important; }
-  .schedule .apexcharts-series.legend-mouseover-inactive + .apexcharts-series path {
-    stroke-width: 0; }
   .schedule .apexcharts-tooltip {
     opacity: 0 !important;
     pointer-events: none !important; }
@@ -2492,18 +2508,19 @@ body._lock {
     -webkit-transform: translate(0%);
     -ms-transform: translate(0%);
     transform: translate(0%); }
-  .schedule .apexcharts-legend-text:hover .schedule-button__item {
-    background: #eff2f5; }
-  .schedule .schedule-title {
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    opacity: 0; }
   .schedule._schedule-standart .schedule-title {
     opacity: 1 !important; }
   .schedule._schedule-standart .apexcharts-series[seriesName="series-2"] path {
     stroke-width: 0 !important; }
   .schedule._schedule-standart .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
+    background: #eff2f5; }
+  .schedule._schedule-one .apexcharts-series[seriesName="series-1"] path {
+    stroke-width: 0 !important; }
+  .schedule._schedule-one .apexcharts-legend-series[seriesname="series-1"] .schedule-button__item {
+    background: #eff2f5; }
+  .schedule._schedule-two .apexcharts-series[seriesName="series-2"] path {
+    stroke-width: 0 !important; }
+  .schedule._schedule-two .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
     background: #eff2f5; }
   @media (max-width: 1240px) {
     .schedule {
@@ -2662,14 +2679,17 @@ body._lock {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  font-size: 0; }
+  font-size: 0;
+  /*&._hover {
+		background: rgba(239, 242, 245, 1);
+	}*/
+  /*@media (min-width: 1064px) {
+		&:hover {
+			background: rgba(239, 242, 245, 1);
+		}
+	}*/ }
   .schedule-button__item:last-child {
     margin-bottom: 0; }
-  .schedule-button__item._hover {
-    background: #eff2f5; }
-  @media (min-width: 1064px) {
-    .schedule-button__item:hover {
-      background: #eff2f5; } }
 
 .schedule-button-title {
   display: -webkit-box;

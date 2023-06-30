@@ -2336,13 +2336,13 @@
 		cursor: pointer;
 		transition: all 0.3s ease 0s;
 	}
-	& .apexcharts-series path[filter] {
+	/*& .apexcharts-series path[filter] {
 		stroke-width: 0;
-	}
+	}*/
 
-	&._hover .apexcharts-series path{
+	/*&._hover .apexcharts-series path{
 		stroke-width: 0;
-	}
+	}*/
 	& .apexcharts-series.legend-mouseover-inactive {
 		stroke-width: 6 !important;
 		opacity: 1;
@@ -2352,9 +2352,9 @@
 	}
 
 
-	& .apexcharts-series.legend-mouseover-inactive + .apexcharts-series path{
+	/*& .apexcharts-series.legend-mouseover-inactive + .apexcharts-series path{
 		stroke-width: 0;
-	}
+	}*/
 
 	& .apexcharts-series path[selected="true"] {
 		//stroke-width: 0;
@@ -2412,13 +2412,13 @@
 		transform: translate(0%);
 	}
 
-	& .apexcharts-legend-text:hover .schedule-button__item {
+	/*& .apexcharts-legend-text:hover .schedule-button__item {
 		background: rgba(239, 242, 245, 1);
 	}
 	& .schedule-title{
 		transition: all 0.3s ease 0s;
 		opacity: 0;
-	}
+	}*/
 
 
 
@@ -2431,6 +2431,26 @@
 		stroke-width: 0 !important;
 	}
 	&._schedule-standart .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
+		background: rgba(239, 242, 245, 1);
+	}
+
+	/*&._schedule-one .schedule-title{
+		opacity: 1 !important;
+	}*/
+	&._schedule-one .apexcharts-series[seriesName="series-1"] path{
+		stroke-width: 0 !important;
+	}
+	&._schedule-one .apexcharts-legend-series[seriesname="series-1"] .schedule-button__item {
+		background: rgba(239, 242, 245, 1);
+	}
+
+	/*&._schedule-two .schedule-title{
+		opacity: 1 !important;
+	}*/
+	&._schedule-two .apexcharts-series[seriesName="series-2"] path{
+		stroke-width: 0 !important;
+	}
+	&._schedule-two .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
 		background: rgba(239, 242, 245, 1);
 	}
 
@@ -2599,16 +2619,16 @@
 		margin-bottom: 0;
 	}
 
-	&._hover {
+	/*&._hover {
 		background: rgba(239, 242, 245, 1);
-	}
+	}*/
 
 
-	@media (min-width: 1064px) {
+	/*@media (min-width: 1064px) {
 		&:hover {
 			background: rgba(239, 242, 245, 1);
 		}
-	}
+	}*/
 }
 .schedule-button-title {
 	display: flex;
