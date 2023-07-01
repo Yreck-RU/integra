@@ -2328,6 +2328,22 @@
 	max-width: 100%;
 	max-height: 118px;
 	height: 120px;
+	position: relative;
+
+	/*&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		transition: all 0s ease 1s;
+	}
+	&._active-before:before {
+		transform: scale(0);
+	}*/
 
 
 	& .apexcharts-series path {
@@ -2429,9 +2445,11 @@
 	}
 	&._schedule-standart .apexcharts-series[seriesName="series-2"] path{
 		stroke-width: 0 !important;
+		pointer-events: none;
 	}
 	&._schedule-standart .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
 		background: rgba(239, 242, 245, 1);
+		pointer-events: none;
 	}
 
 	/*&._schedule-one .schedule-title{
@@ -2443,6 +2461,7 @@
 	}
 	&._schedule-one .apexcharts-legend-series[seriesname="series-1"] .schedule-button__item {
 		background: rgba(239, 242, 245, 1);
+		pointer-events: none;
 	}
 
 	/*&._schedule-two .schedule-title{
@@ -2454,6 +2473,7 @@
 	}
 	&._schedule-two .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
 		background: rgba(239, 242, 245, 1);
+		pointer-events: none;
 	}
 
 

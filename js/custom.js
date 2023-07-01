@@ -372,7 +372,7 @@ var options = {
 					let scheduleTitle = document.querySelector(".schedule-title");
 					scheduleTitle.style.height = `${height}px`;
 					scheduleTitle.style.width = `${height}px`;
-				}, 500);
+				}, 1000);
 			},
 			mouseMove: function(event, chartContext, config) {
 				let apexchartsNumber;
@@ -380,6 +380,7 @@ var options = {
 				if (schedule.classList.contains('_schedule-standart')) {
 					schedule.classList.remove('_schedule-standart');
 					schedule.classList.add('_schedule-two');
+					schedule.classList.add('_active-before');
 				}
 				if (ApexchartsTooltip) {
 					document.querySelector(".apexcharts-series").onmouseover = function(event) {
@@ -496,6 +497,7 @@ var options = {
 								schedule.classList.add('_schedule-one');
 							} else if (apexchartsHover.closest('div[seriesname="series-2"]')) {
 								//console.log("2");
+								//alert("2");
 								schedule.classList.remove('_schedule-one');
 								schedule.classList.add('_schedule-two');
 							}
@@ -504,6 +506,7 @@ var options = {
 								scheduleTitle.innerText = "" + apexchartsTitle;
 							}
 						}
+
 					}
 				}
 			}
@@ -561,6 +564,8 @@ let timerTwo = setInterval(function () {
 					receivingInterestItems[i].querySelector(".schedule-button__item").classList.remove('_hover');
 				}
 				let schedule = document.querySelector(".schedule");
+				schedule.classList.remove('_schedule-two');
+				schedule.classList.remove('_schedule-one');
 				schedule.classList.add('_hover');
 				//console.log('k');
 				receivingInterestItem.querySelector(".schedule-button__item").classList.add('_hover');
@@ -568,13 +573,17 @@ let timerTwo = setInterval(function () {
 				//schedule.classList.add('_schedule-two');
 				//console.log(schedule);
 				if (apexchartsHover.closest('div[seriesname="series-1"]')) {
-					//console.log("1");
+					console.log("1");
 					schedule.classList.remove('_schedule-two');
+					schedule.classList.remove('_schedule-one');
+
 					schedule.classList.add('_schedule-one');
 				} else if (apexchartsHover.closest('div[seriesname="series-2"]')) {
-					//console.log("2");
-					//alert("2");
+					console.log("2");
+					schedule.classList.remove('_schedule-two');
 					schedule.classList.remove('_schedule-one');
+
+					//alert("2");
 					schedule.classList.add('_schedule-two');
 				}
 				if (schedule && apexchartsHover) {
