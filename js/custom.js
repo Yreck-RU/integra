@@ -582,32 +582,6 @@ let timerTwo = setInterval(function () {
 					scheduleTitle.innerText = "" + apexchartsTitle;
 				}
 			}
-			receivingInterestItem.onmouseout = function() {
-				for (let i = 0; i < receivingInterestItems.length; i++) {
-					receivingInterestItems[i].querySelector(".schedule-button__item").classList.remove('_hover');
-				}
-				let schedule = document.querySelector(".schedule");
-				schedule.classList.add('_hover');
-				//console.log('k');
-				receivingInterestItem.querySelector(".schedule-button__item").classList.add('_hover');
-				let apexchartsHover = schedule.querySelector(".schedule-button__item._hover");
-				//schedule.classList.add('_schedule-two');
-				//console.log(schedule);
-				if (apexchartsHover.closest('div[seriesname="series-1"]')) {
-					//console.log("1");
-					schedule.classList.remove('_schedule-two');
-					schedule.classList.add('_schedule-one');
-				} else if (apexchartsHover.closest('div[seriesname="series-2"]')) {
-					//console.log("2");
-					//alert("2");
-					schedule.classList.remove('_schedule-one');
-					schedule.classList.add('_schedule-two');
-				}
-				if (schedule && apexchartsHover) {
-					let apexchartsTitle = apexchartsHover.querySelector(".schedule-button-title__text").innerText.match(/[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Lm}\p{Mn}\p{Nd}\p{Pc}']+/u)[0];
-					scheduleTitle.innerText = "" + apexchartsTitle;
-				}
-			};
 
 		}
 	}

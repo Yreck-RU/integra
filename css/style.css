@@ -2515,11 +2515,13 @@ body._lock {
   .schedule._schedule-standart .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
     background: #eff2f5; }
   .schedule._schedule-one .apexcharts-series[seriesName="series-1"] path {
-    stroke-width: 0 !important; }
+    stroke-width: 0 !important;
+    pointer-events: none; }
   .schedule._schedule-one .apexcharts-legend-series[seriesname="series-1"] .schedule-button__item {
     background: #eff2f5; }
   .schedule._schedule-two .apexcharts-series[seriesName="series-2"] path {
-    stroke-width: 0 !important; }
+    stroke-width: 0 !important;
+    pointer-events: none; }
   .schedule._schedule-two .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
     background: #eff2f5; }
   @media (max-width: 1240px) {

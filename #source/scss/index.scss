@@ -2439,6 +2439,7 @@
 	}*/
 	&._schedule-one .apexcharts-series[seriesName="series-1"] path{
 		stroke-width: 0 !important;
+		pointer-events: none;
 	}
 	&._schedule-one .apexcharts-legend-series[seriesname="series-1"] .schedule-button__item {
 		background: rgba(239, 242, 245, 1);
@@ -2449,6 +2450,7 @@
 	}*/
 	&._schedule-two .apexcharts-series[seriesName="series-2"] path{
 		stroke-width: 0 !important;
+		pointer-events: none;
 	}
 	&._schedule-two .apexcharts-legend-series[seriesname="series-2"] .schedule-button__item {
 		background: rgba(239, 242, 245, 1);
