@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	<!--Заголовок страницы, контейнер для других важных данных (не отображается)-->
+	<head>
+		<!--Заголовок страницы-->
+		<title>deposit</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			sizes="192x192"
+			href="img/favicon.ico"
+		/>
+		<!--===============================-->
+		<!--Libs-->
+
+
+		<!--===============================-->
+		<!--Css-->
+			<link rel="stylesheet" href="css/style.min.css" />
+		<!--===============================-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="format-detection" content="telephone=no">
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<div class="wrapper">
+			<div class="dashboard">
+				<img src="img/dashboard/bacgraund.png" alt="" class="dashboard__img">
+				<div class="dashboard__wrapper">
+					<div class="dashboard-ponel">
+						<div data-da=".dashboard-body, 640, last" class="dashboard-ponel__top">
+							<a href="#" data-da=".dashboard-header, 1064, last" class="dashboard-logo">
+								<img src="img/Logo.svg" alt="">
+							</a>
+							<ul data-da=".burger-list__body, 1064, last" data-spollers data-one-spoller class="dashboard-ponel__list">
+								<li class="dashboard-ponel-item">
+									<div class="dashboard-ponel-spoeler">
+										<button tabindex="-1" type="button" data-spoller class="dashboard-ponel-spoeler__title">
+											<span class="dashboard-ponel-item__icon icon-House"></span>
+											<span class="dashboard-ponel-item__text">
+												Finance
+											</span>
+											<img src="img/dashboard/CaretDown2.svg" alt="">
+										</button>
+										<div class="dashboard-ponel-spoeler__list">
+											<div class="dashboard-ponel-spoeler__item">
+												<a href="#">
+													Deposit
+												</a>
+											</div>
+											<div class="dashboard-ponel-spoeler__item">
+												<a href="#">
+													Withdrawal
+												</a>
+											</div>
+											<div class="dashboard-ponel-spoeler__item">
+												<a href="#">
+													Swap
+												</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-ChartPieSlice"></span>
+										<span class="dashboard-ponel-item__text">
+											Invest
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-FileText"></span>
+										<span class="dashboard-ponel-item__text">
+											Invest report
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-UsersThree"></span>
+										<span class="dashboard-ponel-item__text">
+											Partners
+										</span>
+										<span class="dashboard-ponel-item__number">
+											+2
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon dashboard-ponel-item__icon_img">
+											<img src="img/dashboard/panel/Newspaper.svg" alt="">
+										</span>
+										<span class="dashboard-ponel-item__text">
+											Docs and sert
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-ArticleMedium"></span>
+										<span class="dashboard-ponel-item__text">
+											News / UPD
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-Student"></span>
+										<span class="dashboard-ponel-item__text">
+											Base of knowledge
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-Megaphone"></span>
+										<span class="dashboard-ponel-item__text">
+											News
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon dashboard-ponel-item__icon_img">
+											<img src="img/dashboard/panel/Gear.svg" alt="">
+										</span>
+										<span class="dashboard-ponel-item__text">
+											Settings
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="dashboard-ponel__bottom">
+							<ul data-da=".burger-list__body, 1064, last" class="dashboard-ponel__list">
+								<li class="dashboard-ponel-item ponel-notification">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon dashboard-ponel-item__icon_img">
+											<img src="img/dashboard/notifications/icon-ponel.svg" alt="">
+										</span>
+										<span class="dashboard-ponel-item__text">
+											Notification
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-Question"></span>
+										<span class="dashboard-ponel-item__text">
+											FAQ
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon icon-Scroll"></span>
+										<span class="dashboard-ponel-item__text">
+											Instructions
+										</span>
+									</a>
+								</li>
+								<li class="dashboard-ponel-item">
+									<a href="#">
+										<span class="dashboard-ponel-item__icon dashboard-ponel-item__icon_img">
+											<img src="img/dashboard/panel/ChatsTeardrop.svg" alt="">
+										</span>
+										<span class="dashboard-ponel-item__text">
+											Support
+										</span>
+									</a>
+								</li>
+							</ul>
+							<div data-da=".burger-tema__content, 1064, last" class="tema-switch">
+								<span class="tema-switch__icon tema-switch__icon_sun">
+									<span class="icon-Sun"></span>
+								</span>
+								<span class="tema-switch__icon tema-switch__icon_moon">
+									<span class="icon-Moon"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="dashboard-body">
+						<div class="dashboard-header dashboard-header_margin-min">
+							<div data-da=".burger-news, 1064, last" class="dashboard-header__left">
+								<div class="dashboard-header-news">
+									<img src="img/dashboard/Megaphone-header.svg" alt="">
+									News:
+									<span class="dashboard-header-news__blak">
+										New crypto listings
+									</span>
+									<span class="dashboard-header-icon dashboard-header-news__title hover-transform" data-protruding="dashboard-news-wrapper">
+										<span class="icon-fi_list"></span>
+									</span>
+									<div class="dashboard-news-wrapper">
+										<div class="dashboard-news-wrapper__header">
+											<div class="_protruding-window-exit">
+												<img src="img/dashboard/exit-icon.svg" alt="">
+											</div>
+											<div class="dashboard-news-wrapper__title">
+												News
+											</div>
+										</div>
+										<div class="dashboard-news-wrapper__body">
+											<div class="dashboard-news-item">
+												<div class="dashboard-news-item__icon">
+													<img src="img/dashboard/news/Megaphone.svg" alt="">
+												</div>
+												<div class="dashboard-news-item__content">
+													<h5 class="dashboard-news-item__title">
+														Request friends and get personalized wines up to $500
+													</h5>
+													<p class="dashboard-news-item__text">
+														Ask your friends to sign up on Integra and get up to $500 worth of wine
+													</p>
+													<p class="dashboard-news-item__data">
+														2023-06-02 16:10:28
+													</p>
+												</div>
+											</div>
+											<div class="dashboard-news-item">
+												<div class="dashboard-news-item__icon">
+													<img src="img/dashboard/news/Megaphone.svg" alt="">
+												</div>
+												<div class="dashboard-news-item__content">
+													<h5 class="dashboard-news-item__title">
+														Request friends and get personalized wines up to $500
+													</h5>
+													<p class="dashboard-news-item__text">
+														Ask your friends to sign up on Integra and get up to $500 worth of wine
+													</p>
+													<p class="dashboard-news-item__data">
+														2023-06-02 16:10:28
+													</p>
+												</div>
+											</div>
+											<div class="dashboard-news-item">
+												<div class="dashboard-news-item__icon">
+													<img src="img/dashboard/news/Megaphone.svg" alt="">
+												</div>
+												<div class="dashboard-news-item__content">
+													<h5 class="dashboard-news-item__title">
+														Request friends and get personalized wines up to $500
+													</h5>
+													<p class="dashboard-news-item__text">
+														Ask your friends to sign up on Integra and get up to $500 worth of wine
+													</p>
+													<p class="dashboard-news-item__data">
+														2023-06-02 16:10:28
+													</p>
+												</div>
+											</div>
+											<div class="dashboard-news-item">
+												<div class="dashboard-news-item__icon">
+													<img src="img/dashboard/news/Megaphone.svg" alt="">
+												</div>
+												<div class="dashboard-news-item__content">
+													<h5 class="dashboard-news-item__title">
+														Request friends and get personalized wines up to $500
+													</h5>
+													<p class="dashboard-news-item__text">
+														Ask your friends to sign up on Integra and get up to $500 worth of wine
+													</p>
+													<p class="dashboard-news-item__data">
+														2023-06-02 16:10:28
+													</p>
+												</div>
+											</div>
+											<div class="dashboard-news-item">
+												<div class="dashboard-news-item__icon">
+													<img src="img/dashboard/news/Megaphone.svg" alt="">
+												</div>
+												<div class="dashboard-news-item__content">
+													<h5 class="dashboard-news-item__title">
+														Request friends and get personalized wines up to $500
+													</h5>
+													<p class="dashboard-news-item__text">
+														Ask your friends to sign up on Integra and get up to $500 worth of wine
+													</p>
+													<p class="dashboard-news-item__data">
+														2023-06-02 16:10:28
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-header__partition dashboard-header__partition_one"></div>
+								<div data-da=".burger-link, 1064, last" class="link-copying _copia-content">
+									<div class="link-copying__icon">
+										<img src="img/dashboard/Link-header.svg" alt="">
+									</div>
+									<a href="" class="link-copying__content _copia-content__content">
+										https://ww...ref=C0OSWBW
+									</a>
+									<div class="link-copying__button hover-transform _copia-content__button">
+										Copy
+									</div>
+									<div class="link-copying__active">
+										<img src="img/dashboard/CheckCircleLink.svg" alt="">
+										<span>
+											Link copied
+										</span>
+									</div>
+								</div>
+								<div class="dashboard-header__partition dashboard-header__partition_two"></div>
+								<div data-da=".burger-data, 1064, last" class="dashboard-header-calendar _timer-forward">
+									<img src="img/dashboard/CalendarBlank-header.svg" alt="">
+									<div class="dashboard-header-calendar__text">
+										18 March <span class="_timer-forward-content">14:58:32</span> <span class="dashboard-header-calendar__text_grey">UTC</span>
+									</div>
+								</div>
+							</div>
+							<div class="dashboard-header__right">
+								<div class="dashboard-header-langvig">
+									<div data-da=".burger-langvig__title, 1064, last" class="dashboard-header-langvig__title" data-protruding="dashboard-langvig-wrapper">
+										<span class="dashboard-header-langvig__icon icon-planet"></span>
+										<span class="dashboard-header-langvig__text">
+											English
+										</span>
+										<span class="dashboard-header-langvig__arrow icon-Arrow-Caret-Down"></span>
+									</div>
+									<div data-da=".dashboard-body, 1064, last" class="dashboard-langvig-wrapper">
+										<div class="dashboard-langvig-wrapper__header">
+											<div class="dashboard-langvig-wrapper__icon _protruding-window-exit">
+												<img src="img/dashboard/exit-icon.svg" alt="">
+											</div>
+											<div class="dashboard-langvig-wrapper__title">
+												Language
+											</div>
+										</div>
+										<div class="dashboard-langvig-wrapper__body">
+											<a href="#" class="dashboard-langvig-wrapper__item active">
+												<span>
+													English
+												</span>
+												<img src="img/dashboard/CheckCircle.svg" alt="">
+											</a>
+											<a href="#" class="dashboard-langvig-wrapper__item">
+												<span>
+													Polski
+												</span>
+												<img src="img/dashboard/CheckCircle.svg" alt="">
+											</a>
+											<a href="#" class="dashboard-langvig-wrapper__item">
+												<span>
+													Українська
+												</span>
+												<img src="img/dashboard/CheckCircle.svg" alt="">
+											</a>
+											<a href="#" class="dashboard-langvig-wrapper__item">
+												<span>
+													Deutsch
+												</span>
+												<img src="img/dashboard/CheckCircle.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-header-notifications">
+									<div data-da=".ponel-notification, 1064, last" class="dashboard-header-notifications__title dashboard-header-icon hover-transform" data-protruding="dashboard-notifications-wrapper">
+										<span class="icon-Not-Icon"></span>
+									</div>
+									<div data-da=".dashboard-body, 1064, last" class="dashboard-notifications-wrapper">
+										<div class="dashboard-notifications-wrapper__header">
+											<div class="_protruding-window-exit">
+												<img src="img/dashboard/exit-icon.svg" alt="">
+											</div>
+											<div class="dashboard-notifications-wrapper__title">
+												Notifications
+											</div>
+											<div class="dashboard-notifications-wrapper__sub-title">
+												<img src="img/dashboard/notifications/CheckCircle.svg" alt="">
+												<span>
+													Mark all read
+												</span>
+											</div>
+										</div>
+										<div class="dashboard-notifications-wrapper__body">
+											<div class="dashboard-notifications-wrapper-item">
+												<div class="dashboard-notifications-wrapper-item__title dashboard-notifications-wrapper-item__title_icon">
+													Login attempted from new IP
+												</div>
+												<div class="dashboard-notifications-wrapper-item__text">
+													The system has detected that your account is logged in from an unused IP address.
+												</div>
+												<div class="dashboard-notifications-wrapper-item__data">
+													2023-06-02 16:10:28
+												</div>
+											</div>
+											<div class="dashboard-notifications-wrapper-item">
+												<div class="dashboard-notifications-wrapper-item__title dashboard-notifications-wrapper-item__title_icon">
+													Login attempted from new IP
+												</div>
+												<div class="dashboard-notifications-wrapper-item__text">
+													The system has detected that your account is logged in from an unused IP address.
+												</div>
+												<div class="dashboard-notifications-wrapper-item__data">
+													2023-06-02 16:10:28
+												</div>
+											</div>
+											<div class="dashboard-notifications-wrapper-item">
+												<div class="dashboard-notifications-wrapper-item__title dashboard-notifications-wrapper-item__title_icon">
+													Login attempted from new IP
+												</div>
+												<div class="dashboard-notifications-wrapper-item__text">
+													The system has detected that your account is logged in from an unused IP address.
+												</div>
+												<div class="dashboard-notifications-wrapper-item__data">
+													2023-06-02 16:10:28
+												</div>
+											</div>
+											<div class="dashboard-notifications-wrapper-item">
+												<div class="dashboard-notifications-wrapper-item__title dashboard-notifications-wrapper-item__title_icon">
+													Login attempted from new IP
+												</div>
+												<div class="dashboard-notifications-wrapper-item__text">
+													The system has detected that your account is logged in from an unused IP address.
+												</div>
+												<div class="dashboard-notifications-wrapper-item__data">
+													2023-06-02 16:10:28
+												</div>
+											</div>
+											<div class="dashboard-notifications-wrapper-item">
+												<div class="dashboard-notifications-wrapper-item__title dashboard-notifications-wrapper-item__title_icon">
+													Login attempted from new IP
+												</div>
+												<div class="dashboard-notifications-wrapper-item__text">
+													The system has detected that your account is logged in from an unused IP address.
+												</div>
+												<div class="dashboard-notifications-wrapper-item__data">
+													2023-06-02 16:10:28
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dashboard-header-profile">
+									<span class="dashboard-header-profile__title icon-Profile hover-transform" data-protruding="dashboard-profile-wrapper"></span>
+									<div class="dashboard-profile-wrapper">
+										<div class="dashboard-profile-body">
+											<div class="dashboard-profile-body__img ibg">
+												<img src="img/dashboard/profile/Avatar.jpg" alt="">
+											</div>
+											<div class="dashboard-profile-body__content">
+												<h5 class="dashboard-profile-body__title">
+													Ethan Anderson
+												</h5>
+												<p class="dashboard-profile-body__text">
+													id: 38840720
+												</p>
+											</div>
+											<a href="#" class="dashboard-profile-body__link">
+												<img src="img/dashboard/profile/icon1.svg" alt="">
+											</a>
+										</div>
+										<a href="#" class="dashboard-profile-wrapper__item active">
+											<img src="img/dashboard/profile/icon2.svg" alt="">
+											<span>
+												Profile
+											</span>
+										</a>
+										<a href="#" class="dashboard-profile-wrapper__item">
+											<img src="img/dashboard/profile/icon3.svg" alt="">
+											<span>
+												Security
+											</span>
+										</a>
+										<a href="#" class="dashboard-profile-wrapper__item">
+											<img src="img/dashboard/profile/icon4.svg" alt="">
+											<span>
+												Notifications
+											</span>
+										</a>
+										<a href="#" class="dashboard-profile-wrapper__item">
+											<img src="img/dashboard/profile/icon5.svg" alt="">
+											<span>
+												Log Out
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="menu__icon _menu__icon">
+								<span></span>
+							</div>
+						</div>
+						<div class="deposit-title">
+							<h3 class="dashboard-body__title">
+								<a href="#">
+									<img src="img/deposit/icon-title.svg" alt="">
+								</a>
+								Withdraw
+							</h3>
+							<a href="#" class="deposit-title__button">
+								<span>Deposit</span>
+								<img src="img/deposit/icon-CaretDown-mb.svg" alt="">
+							</a>
+						</div>
+						<div class="deposit deposit-active deposit-withdraw">
+							<div class="deposit__flex">
+								<div class="deposit__blok deposit__blok_60">
+									<form action="#">
+										<div class="deposit-form">
+											<div class="deposit-form__text">
+												<p>
+													Select coin
+												</p>
+											</div>
+											<div class="deposit-form__body">
+												<div class="deposit-form__item deposit-form__item_no-before">
+													<div class="deposit-form-title">
+														<span class="deposit-form-title__content deposit-form-title__content_min">
+															Select Coin
+														</span>
+													</div>
+													<div class="deposit-form-blok">
+														<div class="select-title">
+															<div class="select__img ibg">
+																<img src="img/deposit/list/icon-USDT.svg" alt="">
+															</div>
+															<div class="select-title__content">
+																<span>USDT</span>TetherUS
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="deposit-form">
+											<div class="deposit-form__text">
+												<p>
+													Send to
+												</p>
+											</div>
+											<div class="deposit-form__body">
+												<div class="deposit-form__item deposit-form__item_no-before">
+													<div class="deposit-form-title">
+														<span class="deposit-form-title__content deposit-form-title__content_min">
+															Address
+														</span>
+													</div>
+													<div class="deposit-form-blok">
+														<div class="select-title select-title_text">
+															<div class="select-title__content">
+																<span>0xd4DbB17e1948595e85c4E9BE2d560A9Dc5cA7efa</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="deposit-form__item deposit-form__item_no-before">
+													<div class="deposit-form-title">
+														<span class="deposit-form-title__content deposit-form-title__content_min">
+															Select Network
+														</span>
+													</div>
+													<div class="deposit-form-blok">
+														<div class="select-title select-title_text">
+															<div class="select-title__content">
+																<span>TRX</span>Tron (TRC20)
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="deposit-form deposit-form_amont">
+											<div class="deposit-form__text">
+												<p>
+													Withdraw amount
+												</p>
+											</div>
+											<div class="deposit-form__body">
+												<div class="deposit-form__item deposit-form__item_no-before">
+													<div class="deposit-form-title">
+														<span class="deposit-form-title__content deposit-form-title__content_min">
+															Amount
+														</span>
+													</div>
+													<div class="deposit-form-blok amount-wrapper">
+														<div class="select-title select-title_text">
+															<input type="number" class="select-title__content" placeholder="Minimum withdrawal 25 USDT">
+															<div class="amount-button">
+																<div class="amount-button__item">
+																	Max
+																</div>
+																<span></span>
+																<div class="amount-button__text">
+																	USDT
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="amount-list">
+														<div class="amount-list__item">
+															<p class="amount-list__text">
+																Main balance
+															</p>
+															<p class="amount-list__text">
+																Token balance
+															</p>
+															<p class="amount-list__text">
+																Partner balance
+															</p>
+														</div>
+														<div class="amount-list__item">
+															<p class="amount-list__text">
+																2984.34 USDT
+															</p>
+															<p class="amount-list__text">
+																1 056 212.00 ITE
+															</p>
+															<p class="amount-list__text">
+																1,218.44 USDT
+															</p>
+														</div>
+														<div class="amount-list__item">
+															<div class="amount-list__link">
+																<a href="#">
+																	<img src="img/deposit/amount/Swap.svg" alt="">
+																	<span>
+																		Swap
+																	</span>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="deposit-form deposit-form_margin-40">
+											<div class="deposit-form__text">
+												<p>
+													Network Fee
+												</p>
+											</div>
+											<div class="deposit-form__body">
+												<div class="deposit-form__item deposit-form__item_no-before">
+													<div class="deposit-form-title">
+														<span class="deposit-form-title__content deposit-form-title__content_min">
+															1% + fix from payment ( 1/2/3 $ )
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="deposit-form">
+											<div class="deposit-form__text">
+												<p>
+													Receive amount
+												</p>
+											</div>
+											<div class="deposit-form__body">
+												<div class="receive">
+													<div class="receive__content">
+														<div class="receive__number">
+															<span>999.00</span> USDT
+														</div>
+														<div class="receive__text">
+															<img src="img/deposit/receive/Frame.svg" alt="">
+															<span>
+																Change withdrawal amount to received amount
+															</span>
+														</div>
+													</div>
+													<div class="receive__button active">
+														Withdraw
+													</div>
+												</div>
+												<div class="deposit-screenshot-footer">
+													<button class="deposit-screenshot-footer__button">
+														<img src="img/deposit/screenshot/icon-3.svg" alt="">
+														<span>
+															Reload
+														</span>
+													</button>
+													<p class="deposit-screenshot-footer__text">
+														<span class="icon-Info"></span>
+														Click on this button to go to a new page and select another asset.
+													</p>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="deposit__blok deposit__blok_no-box-schadov deposit__blok_40">
+									<div class="deposit-statistics">
+										<div class="deposit-statistics__title">
+											Statistics
+										</div>
+										<div class="deposit-statistics__list">
+											<div class="deposit-statistics-item">
+												<div class="deposit-statistics-item__icon">
+													<img src="img/deposit/statistics/Wallet.svg" alt="">
+												</div>
+												<h6 class="deposit-statistics-item__sub-title">
+													Available for withdrawal
+												</h6>
+												<h5 class="deposit-statistics-item__title">
+													12,645.48 USDT
+												</h5>
+											</div>
+											<div class="deposit-statistics-item">
+												<div class="deposit-statistics-item__icon">
+													<img src="img/deposit/statistics/UploadSimple.svg" alt="">
+												</div>
+												<h6 class="deposit-statistics-item__sub-title">
+													Available for withdrawal
+												</h6>
+												<h5 class="deposit-statistics-item__title">
+													12,645.48 USDT
+												</h5>
+											</div>
+											<div class="deposit-statistics-item">
+												<div class="deposit-statistics-item__icon">
+													<img src="img/deposit/statistics/HourglassMedium.svg" alt="">
+												</div>
+												<h6 class="deposit-statistics-item__sub-title">
+													Available for withdrawal
+												</h6>
+												<h5 class="deposit-statistics-item__title">
+													12,645.48 USDT
+												</h5>
+											</div>
+										</div>
+									</div>
+									<div class="deposit-faq">
+										<img src="img/deposit/faq/bacgraund.png" alt="" class="deposit-faq__bacgraund">
+										<div class="deposit-faq__title">
+											FAQ
+										</div>
+										<ul class="deposit-faq__list">
+											<li class="deposit-faq__item">
+												<a href="#">
+													<img src="img/deposit/faq/icon.svg" alt="" class="deposit-faq__icon">
+													<span class="deposit-faq__text">
+														How to deposit crypto?
+													</span>
+												</a>
+											</li>
+											<li class="deposit-faq__item">
+												<a href="#">
+													<img src="img/deposit/faq/icon.svg" alt="" class="deposit-faq__icon">
+													<span class="deposit-faq__text">
+														How to Deposit Crypto Step-by-step Guide
+													</span>
+												</a>
+											</li>
+											<li class="deposit-faq__item">
+												<a href="#">
+													<img src="img/deposit/faq/icon.svg" alt="" class="deposit-faq__icon">
+													<span class="deposit-faq__text">
+														Deposit hasn't arrived?
+													</span>
+												</a>
+											</li>
+											<li class="deposit-faq__item">
+												<a href="#">
+													<img src="img/deposit/faq/icon.svg" alt="" class="deposit-faq__icon">
+													<span class="deposit-faq__text">
+														Deposit & Withdrawal Status query
+													</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div data-da=".deposit__flex, 767, last" class="deposit__blok">
+								<div class="deposit-list">
+									<div class="deposit-list-title">
+										<div class="deposit-list-title__text">
+											<span>
+												Recent Deposits
+											</span>
+											<a href="#">
+												<img src="img/deposit/list/icon-1.svg" alt="">
+											</a>
+										</div>
+										<a href="#" class="deposit-list-title__link">
+											<img src="img/deposit/list/icon-2.svg" alt="">
+											<span>
+												Why has my deposit not arrived?
+											</span>
+										</a>
+									</div>
+									<div class="deposit-list__wrapper">
+										<div class="deposit-list-item">
+											<a href="#" class="deposit-list-item__link">
+												<img src="img/deposit/list/icon-5.svg" alt="">
+											</a>
+											<div class="deposit-list-item__title">
+												<div class="deposit-list-item__icon ibg">
+													<img src="img/deposit/list/icon-USDT.svg" alt="">
+												</div>
+												<h5 class="deposit-list-item__content">
+													2000 USDT
+												</h5>
+												<div class="deposit-list-item__status deposit-list-item__status_gren">
+													Completed
+												</div>
+											</div>
+											<div class="deposit-list-item__wrapper">
+												<div class="deposit-list-item__data">
+													<span>
+														Date:
+													</span>
+													2023-05-26 11:31
+												</div>
+												<div class="deposit-list-item__network">
+													<span>
+														Network:
+													</span>
+													TRX
+												</div>
+												<div class="deposit-list-adres">
+													<span class="deposit-list-adres__title">
+														Address:
+													</span>
+													<a href="#" class="deposit-list-adres__content">
+														TYAw8KmmmXoH2ANd9rFtERzRxfVz8L6GBK
+													</a>
+													<div class="deposit-list-adres__button">
+														<img src="img/deposit/list/icon-3.svg" alt="">
+													</div>
+													<div class="deposit-list-adres__button">
+														<img src="img/deposit/list/icon-4.svg" alt="">
+													</div>
+												</div>
+												<div class="deposit-list-txid">
+													<span class="deposit-list-txid__title">
+														TxID:
+													</span>
+													<a href="#" class="deposit-list-txid__content">
+														Kmmm...FtERzRxf
+													</a>
+													<div class="deposit-list-txid__button">
+														<img src="img/deposit/list/icon-3.svg" alt="">
+													</div>
+													<div class="deposit-list-txid__button">
+														<img src="img/deposit/list/icon-4.svg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="deposit-list-item">
+											<a href="#" class="deposit-list-item__link">
+												<img src="img/deposit/list/icon-5.svg" alt="">
+											</a>
+											<div class="deposit-list-item__title">
+												<div class="deposit-list-item__icon ibg">
+													<img src="img/deposit/list/icon-BTC.svg" alt="">
+												</div>
+												<h5 class="deposit-list-item__content">
+													0.466454 BTC
+												</h5>
+												<div class="deposit-list-item__status deposit-list-item__status_yellow">
+													Pending
+												</div>
+											</div>
+											<div class="deposit-list-item__wrapper">
+												<div class="deposit-list-item__data">
+													<span>
+														Date:
+													</span>
+													2023-05-26 11:31
+												</div>
+												<div class="deposit-list-item__network">
+													<span>
+														Network:
+													</span>
+													TRX
+												</div>
+												<div class="deposit-list-adres">
+													<span class="deposit-list-adres__title">
+														Address:
+													</span>
+													<a href="#" class="deposit-list-adres__content">
+														TYAw8KmmmXoH2ANd9rFtERzRxfVz8L6GBK
+													</a>
+													<div class="deposit-list-adres__button">
+														<img src="img/deposit/list/icon-3.svg" alt="">
+													</div>
+													<div class="deposit-list-adres__button">
+														<img src="img/deposit/list/icon-4.svg" alt="">
+													</div>
+												</div>
+												<div class="deposit-list-txid">
+													<span class="deposit-list-txid__title">
+														TxID:
+													</span>
+													<a href="#" class="deposit-list-txid__content">
+														Kmmm...FtERzRxf
+													</a>
+													<div class="deposit-list-txid__button">
+														<img src="img/deposit/list/icon-3.svg" alt="">
+													</div>
+													<div class="deposit-list-txid__button">
+														<img src="img/deposit/list/icon-4.svg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="deposit-list-item">
+											<a href="#" class="deposit-list-item__link">
+												<img src="img/deposit/list/icon-5.svg" alt="">
+											</a>
+											<div class="deposit-list-item__title">
+												<div class="deposit-list-item__icon ibg">
+													<img src="img/deposit/list/icon-TRX.svg" alt="">
+												</div>
+												<h5 class="deposit-list-item__content">
+													600 TRX
+												</h5>
+												<div class="deposit-list-item__status deposit-list-item__status_gren">
+													Completed
+												</div>
+											</div>
+											<div class="deposit-list-item__wrapper">
+												<div class="deposit-list-item__data">
+													<span>
+														Date:
+													</span>
+													2023-05-26 11:31
+												</div>
+												<div class="deposit-list-item__network">
+													<span>
+														Network:
+													</span>
+													TRX
+												</div>
+												<div class="deposit-list-adres">
+													<span class="deposit-list-adres__title">
+														Address:
+													</span>
+													<a href="#" class="deposit-list-adres__content">
+														TYAw8KmmmXoH2ANd9rFtERzRxfVz8L6GBK
+													</a>
+													<div class="deposit-list-adres__button">
+														<img src="img/deposit/list/icon-3.svg" alt="">
+													</div>
+													<div class="deposit-list-adres__button">
+														<img src="img/deposit/list/icon-4.svg" alt="">
+													</div>
+												</div>
+												<div class="deposit-list-txid">
+													<span class="deposit-list-txid__title">
+														TxID:
+													</span>
+													<a href="#" class="deposit-list-txid__content">
+														Kmmm...FtERzRxf
+													</a>
+													<div class="deposit-list-txid__button">
+														<img src="img/deposit/list/icon-3.svg" alt="">
+													</div>
+													<div class="deposit-list-txid__button">
+														<img src="img/deposit/list/icon-4.svg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a href="#" class="deposit-list__mb-link">
+										<span>
+											View all
+										</span>
+										<img src="img/deposit/icon-CaretDown-mb.svg" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="burger _menu__body">
+						<div class="burger-account"> 
+							<div class="burger-account__img icon-Profile"></div>
+							<div class="burger-account__content">
+								<h5 class="burger-account__title">
+									Ethan Anderson
+								</h5>
+								<a href="#" class="burger-account__email">
+									ethan.anderson@example.com
+								</a>
+							</div>
+							<div class="burger-account__icon">
+								<img src="img/dashboard/CaretDownBlack.svg" alt="">
+							</div>
+						</div>
+						<div class="burger-news"></div>
+						<div class="burger-link"></div>
+						<div class="burger-data"></div>
+						<div class="burger-list">
+							<div class="burger-list__body"></div>
+							<div class="burger-tema">
+								<div class="burger-tema__text">
+									<span class="icon-MoonStars"></span>
+									Dark mode
+								</div>
+								<div class="burger-tema__content"></div>
+							</div>
+							<div class="burger-langvig">
+								<div class="burger-langvig__text">
+									<span class="icon-planet"></span>
+									Language
+								</div>
+								<div class="burger-langvig__title">
+									<img src="img/dashboard/CaretDownBlack.svg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dashboard-mb-ponel">
+						<div class="dashboard-mb-ponel__item">
+							<a href="#" class="active icon-House"></a>
+						</div>
+						<div class="dashboard-mb-ponel__item">
+							<a href="#" class="icon-ChartPieSlice"></a>
+						</div>
+						<div class="dashboard-mb-ponel__item">
+							<a href="#" class="icon-UsersThree"></a>
+						</div>
+						<div class="dashboard-mb-ponel__item">
+							<a href="#" class="icon-Megaphone"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>-->
+		<script src="libs/apexcharts.js" ></script>
+		<script src="js/custom.js"></script>
+	</body>
+</html>
